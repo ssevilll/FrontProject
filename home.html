@@ -12,7 +12,8 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="light ltr">
+
     <section id="top-header">
         <div class="message">
             <p>Welcome to Our store Multikart!</p>
@@ -33,123 +34,139 @@
     </section>
 
     <section id="navbar">
-
-        
-
-
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-            <div class="container-fluid" >
-                <a class="navbar-brand" href="#">Navbar</a>
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid custom-navbar-container">
+                <div class="navbar-left-side">
+                    <a href="#"><i class="fa-solid fa-bars menu-bars" ></i></a>
+                    <a class="navbar-brand m-0 p-0" href="#">
+                        <img src="./assets/img/logo.png" alt="Site logo" class="logo-image">
+                    </a>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><img src="./assets/img/logo.png" alt=""></a>
+                <div class="collapse navbar-collapse justify-content-between align-items-center margin-left-4" id="navbarNavDropdown">
+                    <ul class="navbar-nav custom-nav-links">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-current="page"
+                                aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">NEW DEMOS</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Fashion 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Fashion 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Fashion 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">CLOTHING</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Electronics 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Electronics 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Electronics 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">BASICS</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Furniture 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Furniture 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Furniture 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">BEAUTY</a></li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">ELECTRONIC</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Furniture 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Furniture 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Furniture 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">FURNITURE</a></li>
+                                <li><a class="dropdown-item" href="#">VEGETABLES</a></li>
+                                <li><a class="dropdown-item" href="#">WATCH</a></li>
+                                <li><a class="dropdown-item" href="#">LIGHTS</a></li>
+                                <li><a class="dropdown-item" href="#">GOOGLES</a></li>
+                                <li><a class="dropdown-item" href="#">SHOES</a></li>
+                                <li><a class="dropdown-item" href="#">BAGS</a></li>
+                                <li><a class="dropdown-item" href="#">FLOWERS</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Dropdown
+                                Shop
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Dropdown
+                                Products
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Dropdown
+                                Features
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Dropdown
+                                Pages
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Dropdown
+                                Blogs
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li> -->
                     </ul>
                     <div class="icons">
-                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="#"><i class="fa-solid fa-gear"></i></a>
-                        <a href="#"> <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-solid fa-user"></i>
                     </div>
-                    <!-- <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form> -->
                 </div>
             </div>
         </nav>
+
     </section>
 
 
@@ -158,7 +175,10 @@
 
 
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/script/script.js"></script>
 </body>
 
 </html>
