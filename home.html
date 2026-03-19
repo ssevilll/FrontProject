@@ -3,6 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -14,46 +19,52 @@
 
 <body>
 
-    <section id="top-header" class="bg-gray-100 py-2 px-4 flex justify-between items-center">
+    <section id="top-header" class="bg-gray-100 px-4 flex justify-between items-center" style="height: 50px;">
         <div class="container mx-auto flex justify-between items-center px-6">
 
             <div class="left-section flex justify-center items-center gap-5">
 
                 <div class="message text-sm text-gray-600">
-                    <p>Welcome to Our store Multikart!</p>
+                    <p style="color:#999999">Welcome to Our store Multikart!</p>
                 </div>
                 <div class="contact text-sm text-gray-600">
-                    <p><i class="fa-solid fa-phone"></i> Call Us: 123 - 456 - 7890</p>
+                    <p style="color:#999999"><i class="fa-solid fa-phone" style="color:#999999"></i > Call Us: 123 - 456 - 7890</p>
                 </div>
             </div>
             <div class="right-section flex justify-center items-center gap-4">
 
-                <div class="wish-list">
+                <div class="wish-list" >
                     <a href="#" class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800">
-                        <i class="fa-solid fa-heart"></i>
-                        <p>Wishlist</p>
+                        <i class="fa-solid fa-heart" style="color:#999999"></i>
+                        <p style="color:#999999">Wishlist</p>
                     </a>
                 </div>
                 <div class="account">
-                    <a href="#" class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800">
-                        <i class="fa-solid fa-user"></i>
-                        <p>My Account</p>
+                    <a href="#" class="account-trigger flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa-solid fa-user" style="color:#999999"></i>
+                        <p style="color:#999999">My Account</p>
                     </a>
+                    <div class="account-dropdown">
+                        <a href="#" class="account-link">Login</a>
+                        <a href="#" class="account-link">Register</a>
+                        <a href="#" class="account-link">Logout</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="navbar">
-        <nav class="sticky top-0 left-0 z-20 w-full border-b border-gray-200 bg-white">
-            <div class="mx-auto flex w-full flex-wrap items-center justify-between px-4 py-4 md:px-6 lg:px-8">
+    <section id="navbar" style="position: relative; z-index: 3000;">
+        <nav class="sticky top-0 left-0 w-full border-b border-gray-200 bg-white" style="height: 115px; z-index: 3000;">
+            <div class="mx-auto flex h-full w-full flex-wrap items-center justify-between px-4 md:px-6 lg:px-8">
                 <div class="flex items-center gap-4">
                     <button data-drawer-target="sidebar-menu" data-drawer-toggle="sidebar-menu"
                         aria-controls="sidebar-menu" class="text-gray-800">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                     <a href="#" class="m-0 p-0">
-                        <img src="./assets/img/logo.png" alt="Site logo" class="h-9 w-auto">
+                        <img src="./assets/img/logo.png" alt="Site logo" class="h-10 w-auto">
                     </a>
                 </div>
 
@@ -68,232 +79,270 @@
                     </svg>
                 </button>
 
-                <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level-dropdown">
-                    <ul
-                        class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:ms-12 md:flex-row md:space-x-8 md:border-0 md:bg-white">
-                        <li>
-                            <button id="homeDropdownButton" data-dropdown-toggle="homeDropdown"
-                                class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                Home
-                                <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m19 9-7 7-7-7" />
-                                </svg>
-                            </button>
-                            <div id="homeDropdown"
-                                class="z-10 hidden w-52 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                <ul class="py-2 text-sm text-gray-700" aria-labelledby="homeDropdownButton">
-                                    <li class="relative">
-                                        <button id="homeDropendOneButton" data-dropend-toggle="homeDropendOne"
-                                            type="button" class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
-                                            Fashion Home
-                                            <svg class="ms-auto h-4 w-4" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-                                            </svg>
-                                        </button>
-                                        <div id="homeDropendOne"
-                                            class="absolute left-full top-0 z-20 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
-                                            <ul class="py-2 text-sm text-gray-700"
-                                                aria-labelledby="homeDropendOneButton">
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Fashion 1</a>
-                                                </li>
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Fashion 2</a>
-                                                </li>
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Fashion 3</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="relative">
-                                        <button id="homeDropendTwoButton" data-dropend-toggle="homeDropendTwo"
-                                            type="button" class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
-                                            Furniture Home
-                                            <svg class="ms-auto h-4 w-4" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-                                            </svg>
-                                        </button>
-                                        <div id="homeDropendTwo"
-                                            class="absolute left-full top-0 z-20 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
-                                            <ul class="py-2 text-sm text-gray-700"
-                                                aria-labelledby="homeDropendTwoButton">
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Furniture
-                                                        1</a></li>
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Furniture
-                                                        2</a></li>
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Furniture
-                                                        3</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="relative">
-                                        <button id="homeDropendThreeButton" data-dropend-toggle="homeDropendThree"
-                                            type="button" class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
-                                            Minimal Home
-                                            <svg class="ms-auto h-4 w-4" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-                                            </svg>
-                                        </button>
-                                        <div id="homeDropendThree"
-                                            class="absolute left-full top-0 z-20 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
-                                            <ul class="py-2 text-sm text-gray-700"
-                                                aria-labelledby="homeDropendThreeButton">
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Minimal 1</a>
-                                                </li>
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Minimal 2</a>
-                                                </li>
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Minimal 3</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Electronics Home</a></li>
-                                    <li class="relative">
-                                        <button id="homeDropendFiveButton" data-dropend-toggle="homeDropendFive"
-                                            type="button" class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
-                                            Watch Home
-                                            <svg class="ms-auto h-4 w-4" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-                                            </svg>
-                                        </button>
-                                        <div id="homeDropendFive"
-                                            class="absolute left-full top-0 z-20 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
-                                            <ul class="py-2 text-sm text-gray-700"
-                                                aria-labelledby="homeDropendFiveButton">
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch 1</a>
-                                                </li>
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch 2</a>
-                                                </li>
-                                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch 3</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shoes Home</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bags Home</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Beauty Home</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Jewelry Home</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Flowers Home</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Kids Home</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pets Home</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Sports Home</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                <div class="right-side flex w-full items-center justify-between md:w-auto gap-5"  style="color: #212121; font-size: 18px">
 
-                        <li>
-                            <button id="shopDropdownButton" data-dropdown-toggle="shopDropdown"
-                                class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                Shop
-                                <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m19 9-7 7-7-7" />
-                                </svg>
-                            </button>
-                            <div id="shopDropdown"
-                                class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                <ul class="py-2 text-sm text-gray-700" aria-labelledby="shopDropdownButton">
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Grid</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop List</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Filter</a></li>
-                                </ul>
-                            </div>
-                        </li>
 
-                        <li>
-                            <button id="productsDropdownButton" data-dropdown-toggle="productsDropdown"
-                                class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                Products
-                                <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m19 9-7 7-7-7" />
-                                </svg>
-                            </button>
-                            <div id="productsDropdown"
-                                class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                <ul class="py-2 text-sm text-gray-700" aria-labelledby="productsDropdownButton">
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Box</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Slider</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Gallery</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                    <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level-dropdown">
+                        <ul
+                            class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:ms-12 md:flex-row md:space-x-8 md:border-0 md:bg-white">
+                            <li>
+                                <button id="homeDropdownButton" data-dropdown-toggle="homeDropdown"
+                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                    Home
+                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 9-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div id="homeDropdown"
+                                    class="nav-dropdown-layer hidden w-52 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="homeDropdownButton">
+                                        <li class="relative">
+                                            <button id="homeDropendOneButton" data-dropend-toggle="homeDropendOne"
+                                                type="button"
+                                                class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                Fashion Home
+                                                <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                    <path stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                </svg>
+                                            </button>
+                                            <div id="homeDropendOne"
+                                                class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                <ul class="py-2 text-sm text-gray-700"
+                                                    aria-labelledby="homeDropendOneButton">
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                            1</a>
+                                                    </li>
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                            2</a>
+                                                    </li>
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                            3</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="relative">
+                                            <button id="homeDropendTwoButton" data-dropend-toggle="homeDropendTwo"
+                                                type="button"
+                                                class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                Furniture Home
+                                                <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                    <path stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                </svg>
+                                            </button>
+                                            <div id="homeDropendTwo"
+                                                class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                <ul class="py-2 text-sm text-gray-700"
+                                                    aria-labelledby="homeDropendTwoButton">
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                            1</a></li>
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                            2</a></li>
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                            3</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="relative">
+                                            <button id="homeDropendThreeButton" data-dropend-toggle="homeDropendThree"
+                                                type="button"
+                                                class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                Minimal Home
+                                                <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                    <path stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                </svg>
+                                            </button>
+                                            <div id="homeDropendThree"
+                                                class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                <ul class="py-2 text-sm text-gray-700"
+                                                    aria-labelledby="homeDropendThreeButton">
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                            1</a>
+                                                    </li>
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                            2</a>
+                                                    </li>
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                            3</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Electronics Home</a>
+                                        </li>
+                                        <li class="relative">
+                                            <button id="homeDropendFiveButton" data-dropend-toggle="homeDropendFive"
+                                                type="button"
+                                                class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                Watch Home
+                                                <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                    <path stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                </svg>
+                                            </button>
+                                            <div id="homeDropendFive"
+                                                class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                <ul class="py-2 text-sm text-gray-700"
+                                                    aria-labelledby="homeDropendFiveButton">
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                            1</a>
+                                                    </li>
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                            2</a>
+                                                    </li>
+                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                            3</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shoes Home</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bags Home</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Beauty Home</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Jewelry Home</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Flowers Home</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Kids Home</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pets Home</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Sports Home</a></li>
+                                    </ul>
+                                </div>
+                            </li>
 
-                        <li>
-                            <button id="featuresDropdownButton" data-dropdown-toggle="featuresDropdown"
-                                class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                Features
-                                <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m19 9-7 7-7-7" />
-                                </svg>
-                            </button>
-                            <div id="featuresDropdown"
-                                class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                <ul class="py-2 text-sm text-gray-700" aria-labelledby="featuresDropdownButton">
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature One</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature Two</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                            <li>
+                                <button id="shopDropdownButton" data-dropdown-toggle="shopDropdown"
+                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                    Shop
+                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 9-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div id="shopDropdown"
+                                    class="nav-dropdown-layer hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="shopDropdownButton">
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Grid</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop List</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Filter</a></li>
+                                    </ul>
+                                </div>
+                            </li>
 
-                        <li>
-                            <button id="pagesDropdownButton" data-dropdown-toggle="pagesDropdown"
-                                class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                Pages
-                                <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m19 9-7 7-7-7" />
-                                </svg>
-                            </button>
-                            <div id="pagesDropdown"
-                                class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                <ul class="py-2 text-sm text-gray-700" aria-labelledby="pagesDropdownButton">
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">About Us</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                            <li>
+                                <button id="productsDropdownButton" data-dropdown-toggle="productsDropdown"
+                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                    Products
+                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 9-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div id="productsDropdown"
+                                    class="nav-dropdown-layer hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="productsDropdownButton">
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Box</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Slider</a>
+                                        </li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Gallery</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
 
-                        <li>
-                            <button id="blogsDropdownButton" data-dropdown-toggle="blogsDropdown"
-                                class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                Blogs
-                                <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m19 9-7 7-7-7" />
-                                </svg>
-                            </button>
-                            <div id="blogsDropdown"
-                                class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                <ul class="py-2 text-sm text-gray-700" aria-labelledby="blogsDropdownButton">
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Grid</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Details</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                            <li>
+                                <button id="featuresDropdownButton" data-dropdown-toggle="featuresDropdown"
+                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                    Features
+                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 9-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div id="featuresDropdown"
+                                    class="nav-dropdown-layer hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="featuresDropdownButton">
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature One</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature Two</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <button id="pagesDropdownButton" data-dropdown-toggle="pagesDropdown"
+                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                    Pages
+                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 9-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div id="pagesDropdown"
+                                    class="nav-dropdown-layer hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="pagesDropdownButton">
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">About Us</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <button id="blogsDropdownButton" data-dropdown-toggle="blogsDropdown"
+                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                    Blogs
+                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 9-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div id="blogsDropdown"
+                                    class="nav-dropdown-layer hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="blogsDropdownButton">
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Grid</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Details</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div>
+                            <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                <i class="fa-solid fa-gear"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </section>
 
     <div id="sidebar-menu"
-        class="fixed top-0 left-0 z-40 h-screen w-64 -translate-x-full transition-transform bg-white border-r border-gray-200"
-        tabindex="-1">
+        class="fixed top-0 left-0 z-20 h-screen -translate-x-full transition-transform bg-white border-r border-gray-200"
+        style="z-index: 10000; width: 300px;" tabindex="-1">
 
         <div class="p-4 border-b border-gray-200 flex items-center justify-between gap-5">
             <h5 class="text-base font-semibold text-gray-500 px-6">BACK</h5>
@@ -310,7 +359,7 @@
                     <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
                 </a>
                 <ul
-                    class="absolute left-full top-0 z-50 hidden min-w-44 rounded-lg border border-gray-200 bg-white p-2 shadow-md group-hover:block group-focus-within:block">
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Fashion Home</a></li>
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Furniture Home</a></li>
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Minimal Home</a></li>
@@ -322,7 +371,7 @@
                     <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
                 </a>
                 <ul
-                    class="absolute left-full top-0 z-50 hidden min-w-44 rounded-lg border border-gray-200 bg-white p-2 shadow-md group-hover:block group-focus-within:block">
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shop Grid</a></li>
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shop List</a></li>
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shop Filter</a></li>
@@ -334,40 +383,115 @@
                     <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
                 </a>
                 <ul
-                    class="absolute left-full top-0 z-50 hidden min-w-44 rounded-lg border border-gray-200 bg-white p-2 shadow-md group-hover:block group-focus-within:block">
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Product Box</a></li>
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Product Slider</a></li>
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Product Gallery</a></li>
                 </ul>
             </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Features
+                </a>
+            </li>
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Pages
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">About Us</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">FAQ</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Contact</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Blogs
+                </a>
+            </li>
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Electronics
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Phones</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Laptops</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Accessories</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Shoes
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Bags
+                </a>
+            </li>
         </ul>
 
     </div>
 
+    <button id="sidebar-overlay" type="button" data-drawer-hide="sidebar-menu"
+        class="sidebar-overlay" aria-label="Close sidebar overlay"></button>
 
-    <section id="photos-main">
 
-
-        <div id="controls-carousel" class="relative w-full" data-carousel="static">
+    <section id="carousel">
+        <div id="controls-carousel" class="group relative w-full" data-carousel="static">
             <!-- Carousel wrapper -->
-            <div class="relative h-190 overflow-hidden rounded-base md:h-96 ">
+            <div class="relative overflow-hidden rounded-base" style="height: 585px;">
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./assets/img/1.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <img src="./assets/img/1.jpg" class="absolute inset-0 block h-full w-full object-cover"
+                        alt="Summer collection">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent"
+                        style="display: flex; justify-content: center;"></div>
+                    <div class="absolute z-20" style="left: 7rem; text-align: center; top: 195px;">
+                        <h2 class="mb-4 text-3xl font-semibold text-white md:text-5xl"><span class="lato-light"
+                                style="color:#787878; display: inline-block; width: 295px;">Welcome
+                                to fashion</span><br><span class="text-5xl font-bold text-black md:text-7xl"
+                                style="color: #212121; display: inline-block; width: 415px; letter-spacing: normal;">MEN
+                                FASHION</span></h2>
+                        <div class="flex gap-3">
+                            <a href="#" id="shop"
+                                style="background-color: #ff4b3b; margin-left: 50%; transform: translateX(-50%); width: 145px; height: 50px; display: inline-flex; align-items: center; justify-content: center;"
+                                class="rounded-base text-sm font-semibold text-white transition hover:bg-gray-200"><span
+                                    class="shop-label" style="font-size: 18px; font-weight: bold;">Shop now</span></a>
+                        </div>
+                    </div>
                 </div>
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="./assets/img/2.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <img src="./assets/img/2.jpg" class="absolute inset-0 block h-full w-full object-cover"
+                        alt="Streetwear collection">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent"
+                        style="display: flex; justify-content: center;"></div>
+                    <div class="absolute z-20" style="left: 7rem; text-align: center; top: 195px;">
+                        <h2 class="mb-4 text-3xl font-semibold text-white md:text-5xl"><span class="lato-light"
+                                style="color:#787878; display: inline-block; width: 295px">Welcome
+                                to fashion</span><br><span class="text-5xl font-bold text-black md:text-7xl"
+                                style="color: #212121; display: inline-block; width: 535px; letter-spacing: normal;">WOMEN
+                                FASHION</span></h2>
+                        <div class="flex gap-3">
+                            <a href="#" id="shop"
+                                style="background-color: #ff4b3b; margin-left: 50%; transform: translateX(-50%); width: 145px; height: 50px; display: inline-flex; align-items: center; justify-content: center;"
+                                class="rounded-base text-sm font-semibold text-white transition hover:bg-gray-200"><span
+                                    class="shop-label" style="font-size: 18px; font-weight: bold">Shop now</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Slider controls -->
             <button type="button"
-                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                class="absolute top-0 start-0 z-10 flex h-full items-center justify-center px-4 opacity-0 -translate-x-6 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-focus-within:opacity-100 group-focus-within:translate-x-0"
                 data-carousel-prev>
                 <span
-                    class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                     <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -377,10 +501,10 @@
                 </span>
             </button>
             <button type="button"
-                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                class="absolute top-0 end-0 z-10 flex h-full items-center justify-center px-4 opacity-0 translate-x-6 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-focus-within:opacity-100 group-focus-within:translate-x-0"
                 data-carousel-next>
                 <span
-                    class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                     <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -390,7 +514,6 @@
                 </span>
             </button>
         </div>
-
     </section>
 
 

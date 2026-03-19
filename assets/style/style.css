@@ -1,3 +1,222 @@
 #navbar button:hover {
     cursor: pointer;
 }
+
+#navbar {
+    position: relative;
+    z-index: 99999;
+}
+
+#navbar nav {
+    position: relative;
+    z-index: 3000;
+}
+
+#navbar .nav-dropdown-layer {
+    position: absolute !important;
+    z-index: 5000 !important;
+}
+
+#navbar-multi-level-dropdown,
+#navbar-multi-level-dropdown > ul,
+#navbar-multi-level-dropdown li {
+    position: relative;
+    z-index: 4000;
+}
+
+#controls-carousel,
+#controls-carousel * {
+    z-index: 0 !important;
+}
+
+#controls-carousel .z-20 {
+    z-index: 0 !important;
+}
+
+.lato-light {
+    color: #777777;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+
+#controls-carousel {
+    z-index: 0;
+}
+
+.nav-dropdown-layer {
+    z-index: 100000;
+}
+
+#controls-carousel button {
+    cursor: pointer;
+}
+
+#navbar .fa-solid {
+    font-size: 1.3rem;
+}
+
+#navbar .nav-dropdown-layer a,
+#navbar .nav-dropdown-layer button {
+    background-image: linear-gradient(#ff4b3b, #ff4b3b);
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    background-position: 0 calc(100% - 1px);
+    transition: background-size 0.6s ease;
+}
+
+#navbar .nav-dropdown-layer a:hover,
+#navbar .nav-dropdown-layer a:focus-visible,
+#navbar .nav-dropdown-layer button:hover,
+#navbar .nav-dropdown-layer button:focus-visible {
+    background-size: 60% 2.5px;
+}
+
+#navbar #navbar-multi-level-dropdown a:hover,
+#navbar #navbar-multi-level-dropdown a:focus-visible,
+#navbar #navbar-multi-level-dropdown button:hover,
+#navbar #navbar-multi-level-dropdown button:focus-visible,
+#sidebar-menu ul a:hover,
+#sidebar-menu ul a:focus-visible,
+#sidebar-menu ul button:hover,
+#sidebar-menu ul button:focus-visible {
+    background-color: transparent !important;
+}
+
+#sidebar-menu > ul > li > ul a {
+    background-image: linear-gradient(#ff4b3b, #ff4b3b);
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    background-position: 0 calc(100% - 1px);
+    transition: background-size 0.6s ease;
+}
+
+#sidebar-menu > ul > li > ul a:hover,
+#sidebar-menu > ul > li > ul a:focus-visible {
+    background-size: 60% 2.5px;
+}
+
+#top-header .wish-list:hover .fa-heart {
+    color: #ff4b3b;
+}
+
+#top-header .fa-solid {
+    transition: color 0.3s ease;
+}
+
+#top-header .account:hover .fa-user {
+    color: #ff4b3b;
+}
+
+#top-header .account {
+    position: relative;
+}
+
+#top-header .account-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    min-width: 130px;
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    z-index: 120000;
+}
+
+#top-header .account-link {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #4b5563;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#top-header .account-link:hover,
+#top-header .account-link:focus-visible {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+#top-header .account:hover .account-dropdown,
+#top-header .account:focus-within .account-dropdown {
+    display: flex;
+}
+
+#controls-carousel #shop {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    color: #ffffff;
+    transition: color 0.45s ease, border-color 0.45s ease;
+    isolation: isolate;
+}
+
+#controls-carousel #shop .shop-label {
+    position: relative;
+    z-index: 1;
+}
+
+#controls-carousel #shop::before {
+    content: "";
+    position: absolute;
+    top: -35%;
+    left: -35%;
+    width: 170%;
+    height: 170%;
+    background: #ffffff;
+    transform-origin: top right;
+    transform: scaleX(0) skewX(-28deg);
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+#controls-carousel #shop:hover,
+#controls-carousel #shop:focus-visible {
+    color: #000000;
+    border-color: #ff4b3b;
+}
+
+#controls-carousel #shop:hover::before,
+#controls-carousel #shop:focus-visible::before {
+    transform: scaleX(1) skewX(-28deg);
+}
+
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    border: 0;
+    padding: 0;
+    z-index: 9000;
+}
+
+.sidebar-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#sidebar-menu {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+#sidebar-menu.-translate-x-full {
+    transform: translate3d(-100%, 0, 0);
+}
+
+#sidebar-menu:not(.-translate-x-full) {
+    transform: translate3d(0, 0, 0);
+}

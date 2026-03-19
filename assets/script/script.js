@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             menu.style.position = "absolute";
             menu.style.top = "0";
             menu.style.left = "100%";   // push to the right
-            menu.style.marginLeft = "4px"; // small gap
+            menu.style.marginLeft = "0";
             menu.style.transform = "none";
         };
 
@@ -104,9 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         item.style.position = "relative";
         submenu.style.position = "absolute";
-        submenu.style.left = "100%";
+        submenu.style.left = "106%";
         submenu.style.top = "0";
-        submenu.style.marginLeft = "8px";
+        submenu.style.marginLeft = "0";
+        submenu.style.width = "205px";
         submenu.style.zIndex = "60";
         submenu.style.display = "none";
 
@@ -128,4 +129,25 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("mouseenter", openSubmenu);
         item.addEventListener("mouseleave", closeSubmenu);
     });
+
+    const sidebarMenu = document.getElementById("sidebar-menu");
+    const sidebarOverlay = document.getElementById("sidebar-overlay");
+
+    if (sidebarMenu && sidebarOverlay) {
+        const syncSidebarOverlay = function () {
+            const isOpen = !sidebarMenu.classList.contains("-translate-x-full");
+            sidebarOverlay.classList.toggle("is-visible", isOpen);
+        };
+
+        const sidebarObserver = new MutationObserver(function () {
+            syncSidebarOverlay();
+        });
+
+        sidebarObserver.observe(sidebarMenu, {
+            attributes: true,
+            attributeFilter: ["class"]
+        });
+
+        syncSidebarOverlay();
+    }
 });
