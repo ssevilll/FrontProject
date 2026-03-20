@@ -19,326 +19,360 @@
 
 <body>
 
-    <section id="top-header" class="bg-gray-100 px-4 flex justify-between items-center" style="height: 50px;">
-        <div class="container mx-auto flex justify-between items-center px-6">
+    <section id="header">
+        <section id="top-header" class="bg-gray-100 px-4 flex justify-between items-center" style="height: 50px;">
+            <div class="container mx-auto flex justify-between items-center px-6">
 
-            <div class="left-section flex justify-center items-center gap-5">
+                <div class="left-section flex justify-center items-center gap-5">
 
-                <div class="message text-sm text-gray-600">
-                    <p style="color:#999999">Welcome to Our store Multikart!</p>
+                    <div class="message text-sm text-gray-600">
+                        <p style="color:#999999">Welcome to Our store Multikart!</p>
+                    </div>
+                    <div class="contact text-sm text-gray-600">
+                        <p style="color:#999999"><i class="fa-solid fa-phone" style="color:#999999"></i> Call Us: 123 -
+                            456
+                            - 7890</p>
+                    </div>
                 </div>
-                <div class="contact text-sm text-gray-600">
-                    <p style="color:#999999"><i class="fa-solid fa-phone" style="color:#999999"></i > Call Us: 123 - 456 - 7890</p>
-                </div>
-            </div>
-            <div class="right-section flex justify-center items-center gap-4">
+                <div class="right-section flex justify-center items-center gap-4">
 
-                <div class="wish-list" >
-                    <a href="#" class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800">
-                        <i class="fa-solid fa-heart" style="color:#999999"></i>
-                        <p style="color:#999999">Wishlist</p>
-                    </a>
-                </div>
-                <div class="account">
-                    <a href="#" class="account-trigger flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800"
-                        aria-haspopup="true" aria-expanded="false">
-                        <i class="fa-solid fa-user" style="color:#999999"></i>
-                        <p style="color:#999999">My Account</p>
-                    </a>
-                    <div class="account-dropdown">
-                        <a href="#" class="account-link">Login</a>
-                        <a href="#" class="account-link">Register</a>
-                        <a href="#" class="account-link">Logout</a>
+                    <div class="wish-list">
+                        <a href="#" class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800">
+                            <i class="fa-solid fa-heart" style="color:#999999"></i>
+                            <p style="color:#999999">Wishlist</p>
+                        </a>
+                    </div>
+                    <div class="account">
+                        <a href="#"
+                            class="account-trigger flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-user" style="color:#999999"></i>
+                            <p style="color:#999999">My Account</p>
+                        </a>
+                        <div class="account-dropdown">
+                            <a href="#" class="account-link">Login</a>
+                            <a href="#" class="account-link">Register</a>
+                            <a href="#" class="account-link">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="navbar" style="position: relative; z-index: 3000;">
-        <nav class="sticky top-0 left-0 w-full border-b border-gray-200 bg-white" style="height: 115px; z-index: 3000;">
-            <div class="mx-auto flex h-full w-full flex-wrap items-center justify-between px-4 md:px-6 lg:px-8">
-                <div class="flex items-center gap-4">
-                    <button data-drawer-target="sidebar-menu" data-drawer-toggle="sidebar-menu"
-                        aria-controls="sidebar-menu" class="text-gray-800">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                    <a href="#" class="m-0 p-0">
-                        <img src="./assets/img/logo.png" alt="Site logo" class="h-10 w-auto">
-                    </a>
-                </div>
-
-                <button data-collapse-toggle="navbar-multi-level-dropdown" type="button"
-                    class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm text-gray-500 hover:bg-gray-100 md:hidden"
-                    aria-controls="navbar-multi-level-dropdown" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
-                            d="M5 7h14M5 12h14M5 17h14" />
-                    </svg>
-                </button>
-
-                <div class="right-side flex w-full items-center justify-between md:w-auto gap-5"  style="color: #212121; font-size: 18px">
-
-
-                    <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level-dropdown">
-                        <ul
-                            class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:ms-12 md:flex-row md:space-x-8 md:border-0 md:bg-white">
-                            <li>
-                                <button id="homeDropdownButton" data-dropdown-toggle="homeDropdown"
-                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                    Home
-                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="m19 9-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                <div id="homeDropdown"
-                                    class="nav-dropdown-layer hidden w-52 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="homeDropdownButton">
-                                        <li class="relative">
-                                            <button id="homeDropendOneButton" data-dropend-toggle="homeDropendOne"
-                                                type="button"
-                                                class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
-                                                Fashion Home
-                                                <svg class="ms-auto h-4 w-4" aria-hidden="true"
-                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                    <path stroke="currentColor" stroke-linecap="round"
-                                                        stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-                                                </svg>
-                                            </button>
-                                            <div id="homeDropendOne"
-                                                class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
-                                                <ul class="py-2 text-sm text-gray-700"
-                                                    aria-labelledby="homeDropendOneButton">
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Fashion
-                                                            1</a>
-                                                    </li>
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Fashion
-                                                            2</a>
-                                                    </li>
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Fashion
-                                                            3</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="relative">
-                                            <button id="homeDropendTwoButton" data-dropend-toggle="homeDropendTwo"
-                                                type="button"
-                                                class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
-                                                Furniture Home
-                                                <svg class="ms-auto h-4 w-4" aria-hidden="true"
-                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                    <path stroke="currentColor" stroke-linecap="round"
-                                                        stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-                                                </svg>
-                                            </button>
-                                            <div id="homeDropendTwo"
-                                                class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
-                                                <ul class="py-2 text-sm text-gray-700"
-                                                    aria-labelledby="homeDropendTwoButton">
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Furniture
-                                                            1</a></li>
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Furniture
-                                                            2</a></li>
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Furniture
-                                                            3</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="relative">
-                                            <button id="homeDropendThreeButton" data-dropend-toggle="homeDropendThree"
-                                                type="button"
-                                                class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
-                                                Minimal Home
-                                                <svg class="ms-auto h-4 w-4" aria-hidden="true"
-                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                    <path stroke="currentColor" stroke-linecap="round"
-                                                        stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-                                                </svg>
-                                            </button>
-                                            <div id="homeDropendThree"
-                                                class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
-                                                <ul class="py-2 text-sm text-gray-700"
-                                                    aria-labelledby="homeDropendThreeButton">
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Minimal
-                                                            1</a>
-                                                    </li>
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Minimal
-                                                            2</a>
-                                                    </li>
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Minimal
-                                                            3</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Electronics Home</a>
-                                        </li>
-                                        <li class="relative">
-                                            <button id="homeDropendFiveButton" data-dropend-toggle="homeDropendFive"
-                                                type="button"
-                                                class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
-                                                Watch Home
-                                                <svg class="ms-auto h-4 w-4" aria-hidden="true"
-                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                    <path stroke="currentColor" stroke-linecap="round"
-                                                        stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-                                                </svg>
-                                            </button>
-                                            <div id="homeDropendFive"
-                                                class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
-                                                <ul class="py-2 text-sm text-gray-700"
-                                                    aria-labelledby="homeDropendFiveButton">
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
-                                                            1</a>
-                                                    </li>
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
-                                                            2</a>
-                                                    </li>
-                                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
-                                                            3</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shoes Home</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bags Home</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Beauty Home</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Jewelry Home</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Flowers Home</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Kids Home</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pets Home</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Sports Home</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li>
-                                <button id="shopDropdownButton" data-dropdown-toggle="shopDropdown"
-                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                    Shop
-                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="m19 9-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                <div id="shopDropdown"
-                                    class="nav-dropdown-layer hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="shopDropdownButton">
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Grid</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop List</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Filter</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li>
-                                <button id="productsDropdownButton" data-dropdown-toggle="productsDropdown"
-                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                    Products
-                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="m19 9-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                <div id="productsDropdown"
-                                    class="nav-dropdown-layer hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="productsDropdownButton">
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Box</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Slider</a>
-                                        </li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Gallery</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li>
-                                <button id="featuresDropdownButton" data-dropdown-toggle="featuresDropdown"
-                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                    Features
-                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="m19 9-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                <div id="featuresDropdown"
-                                    class="nav-dropdown-layer hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="featuresDropdownButton">
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature One</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature Two</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li>
-                                <button id="pagesDropdownButton" data-dropdown-toggle="pagesDropdown"
-                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                    Pages
-                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="m19 9-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                <div id="pagesDropdown"
-                                    class="nav-dropdown-layer hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="pagesDropdownButton">
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">About Us</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li>
-                                <button id="blogsDropdownButton" data-dropdown-toggle="blogsDropdown"
-                                    class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
-                                    Blogs
-                                    <svg class="ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="m19 9-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                <div id="blogsDropdown"
-                                    class="nav-dropdown-layer hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
-                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="blogsDropdownButton">
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Grid</a></li>
-                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Details</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
+        <section id="navbar" style="position: relative; z-index: 3000;">
+            <nav class="sticky top-0 left-0 w-full border-b border-gray-200 bg-white"
+                style="height: 115px; z-index: 3000;">
+                <div class="mx-auto flex h-full w-full flex-wrap items-center justify-between px-4 md:px-6 lg:px-8">
                     <div class="flex items-center gap-4">
-                        <div>
-                            <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </a>
+                        <button data-drawer-target="sidebar-menu" data-drawer-toggle="sidebar-menu"
+                            aria-controls="sidebar-menu" class="text-gray-800">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                        <a href="#" class="m-0 p-0">
+                            <img src="./assets/img/logo.png" alt="Site logo" class="h-10 w-auto">
+                        </a>
+                    </div>
+
+                    <button data-collapse-toggle="navbar-multi-level-dropdown" type="button"
+                        class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm text-gray-500 hover:bg-gray-100 md:hidden"
+                        aria-controls="navbar-multi-level-dropdown" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                d="M5 7h14M5 12h14M5 17h14" />
+                        </svg>
+                    </button>
+
+                    <div class="right-side flex w-full items-center justify-between md:w-auto gap-5"
+                        style="color: #212121; font-size: 18px">
+
+
+                        <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level-dropdown">
+                            <ul
+                                class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:ms-12 md:flex-row md:space-x-8 md:border-0 md:bg-white">
+                                <li>
+                                    <button id="homeDropdownButton" data-dropdown-toggle="homeDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Home
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="homeDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-52 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="homeDropdownButton">
+                                            <li class="relative">
+                                                <button id="homeDropendOneButton" data-dropend-toggle="homeDropendOne"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Fashion Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendOne"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendOneButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendTwoButton" data-dropend-toggle="homeDropendTwo"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Furniture Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendTwo"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendTwoButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                1</a></li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                2</a></li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendThreeButton"
+                                                    data-dropend-toggle="homeDropendThree" type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Minimal Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendThree"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendThreeButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Electronics
+                                                    Home</a>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendFiveButton" data-dropend-toggle="homeDropendFive"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Watch Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendFive"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendFiveButton">
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shoes Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bags Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Beauty Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Jewelry Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Flowers Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Kids Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pets Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Sports Home</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="shopDropdownButton" data-dropdown-toggle="shopDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Shop
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="shopDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="shopDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Grid</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop List</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Filter</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="productsDropdownButton" data-dropdown-toggle="productsDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Products
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="productsDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="productsDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Box</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Slider</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product
+                                                    Gallery</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="featuresDropdownButton" data-dropdown-toggle="featuresDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Features
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="featuresDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="featuresDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature One</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature Two</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="pagesDropdownButton" data-dropdown-toggle="pagesDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Pages
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="pagesDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="pagesDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">About Us</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="blogsDropdownButton" data-dropdown-toggle="blogsDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Blogs
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="blogsDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="blogsDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Grid</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Details</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div>
-                            <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
-                                <i class="fa-solid fa-gear"></i>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                    <i class="fa-solid fa-gear"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </section>
+
     </section>
+
 
     <div id="sidebar-menu"
         class="fixed top-0 left-0 z-20 h-screen -translate-x-full transition-transform bg-white border-r border-gray-200"
@@ -355,14 +389,39 @@
         <ul class="space-y-2 p-4">
             <li class="relative group">
                 <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
-                    Home
+                    Clothing
                     <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
                 </a>
-                <ul
-                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
-                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Fashion Home</a></li>
-                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Furniture Home</a></li>
-                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Minimal Home</a></li>
+                <ul class="sidebar-mega-menu absolute left-full top-0 z-50 hidden bg-white p-2 flex justify-center group-hover:flex group-focus-within:flex"
+                    style="width: 815px !important; height: 435px; gap: 140px; padding-top: 20px;">
+                    <div class="left">
+                        <p class="font-semibold text-gray-700 mb-2">Women's Fashion</p>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Dresses</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Tops</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Skirts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jeans</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jackets</a></li>
+                        <p class="font-semibold text-gray-700 mb-2">Men's Fashion</p>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shirts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">T-Shirts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jeans</a></li>
+                    </div>
+                    <div class="middle">
+                        <p class="font-semibold text-gray-700 mb-2">Accessories</p>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Bags</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Sunglasses</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Hats</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Belts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jewelry</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Watches</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Scarves</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Footwear</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Sportswear</a></li>
+                    </div>
+                    <div class="right img" style="width: 230px; height: 390px;">
+                        <a href="#"><img src="./assets/img/fashion.5172b934.jpg" alt="fashion"
+                                class="w-full h-full"></a>
+                    </div>
                 </ul>
             </li>
             <li class="relative group">
@@ -386,7 +445,19 @@
                     class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Product Box</a></li>
                     <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Product Slider</a></li>
-                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Product Gallery</a></li>
+                    <li class="relative group">
+                        <a href="#" class="flex items-center justify-between rounded px-3 py-2 hover:bg-gray-100">
+                            Product Gallery
+                            <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                        </a>
+                        <ul
+                            class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery One</a></li>
+                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Two</a></li>
+                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three</a></li>
+                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Four</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li>
@@ -435,11 +506,11 @@
             </li>
         </ul>
 
+
+
+        <button id="sidebar-overlay" type="button" data-drawer-hide="sidebar-menu" class="sidebar-overlay"
+            aria-label="Close sidebar overlay"></button>
     </div>
-
-    <button id="sidebar-overlay" type="button" data-drawer-hide="sidebar-menu"
-        class="sidebar-overlay" aria-label="Close sidebar overlay"></button>
-
 
     <section id="carousel">
         <div id="controls-carousel" class="group relative w-full" data-carousel="static">
@@ -517,8 +588,1026 @@
     </section>
 
 
+    <section id="percentage-off">
+        <div class="container">
+            <div class="row percentage-row flex items-center justify-center">
+                <div class="col-md-6">
+                    <a href="#" class="promo-banner" aria-label="Shop men collection">
+                        <img class="promo-banner-image" src="./assets/img/sub-banner1.5d5f9c6f.jpg" alt="men">
+                        <div class="promo-banner-content">
+                            <p class="promo-banner-subtitle lato-bold">10% OFF</p>
+                            <h3 class="promo-banner-title lato-bold">MEN</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="#" class="promo-banner" aria-label="Shop women collection">
+                        <img class="promo-banner-image" src="./assets/img/sub-banner2.3b2448f3.jpg" alt="women">
+                        <div class="promo-banner-content">
+                            <p class="promo-banner-subtitle lato-bold">10% OFF</p>
+                            <h3 class="promo-banner-title lato-bold">WOMEN</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="collection">
+        <div class="container">
+            <div class="row">
+                <div class="text">
+                    <div class="title">
+                        <p class="lato-regular" style="color: #ff4b3b; font-size: 18px;">Special Offer</p>
+                        <h1 class="lato-bold" style="font-size:36px; color:#222222">TOP COLLECTION</h1>
+                        <hr>
+                    </div>
+                    <div class="descripton flex justify-center" style="margin-top: 30px;">
+                        <p class="lato-regular" style="font-size: 14px; color: #777777; max-width: 665px;">Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit. Ab, modi sint illo corrupti, nobis facere
+                            explicabo eaque minima nesciunt assumenda aliquid sunt? Molestiae, voluptatibus repellendus.
+                        </p>
+                    </div>
+                </div>
 
 
+                <!-- slide=>it will automatically slide after 2500ms, static=>it will not slide automatically, fade=>it will fade in and out -->
+                <div id="collection-carousel" class="relative w-full" data-carousel="slide"
+                    data-carousel-interval="2500" style="height: 650px; width: 100%;">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-56 overflow-hidden rounded-base md:h-96" style="height: 655px;">
+
+                        <!-- Item 1 -->
+                        <div class="duration-700 ease-in-out" data-carousel-item="active">
+                            <div class="cards flex justify-center gap-6 mt-10">
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/16.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/5.jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-purple-600 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/11.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/6.jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/12.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/8.jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-yellow-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/13.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/1 (1).jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="cards flex justify-center gap-6 mt-10">
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/9.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/1 (1).jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/8.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/1 (1).jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/7.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/1 (1).jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/6.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/1 (1).jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="cards flex justify-center gap-6 mt-10">
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/3.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/1 (1).jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/4.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/1 (1).jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/5.jpg" class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/1 (1).jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                                        <!-- IMAGE SECTION -->
+                                        <div class="collection-image-wrap">
+
+                                            <!-- MAIN IMAGE -->
+                                            <img id="mainImage" src="./assets/img/1 (1).jpg"
+                                                class="collection-main-image">
+
+                                            <!-- LEFT-BOTTOM THUMBNAILS -->
+                                            <div class="collection-thumbs">
+                                                <img src="./assets/img/1 (1).jpg" class="collection-thumb"
+                                                    alt="thumbnail one">
+                                                <img src="./assets/img/10.jpg" class="collection-thumb"
+                                                    alt="thumbnail two">
+                                                <img src="./assets/img/11.jpg" class="collection-thumb"
+                                                    alt="thumbnail three">
+                                            </div>
+                                        </div>
+
+                                        <!-- PRODUCT INFO -->
+                                        <div class="mt-4">
+
+                                            <!-- STARS -->
+                                            <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                                ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                            </div>
+
+                                            <!-- TITLE -->
+                                            <h5 class="text-lg text-gray-700 mb-1">
+                                                <a href="#" class="collection-title-link">belted dress</a>
+                                            </h5>
+
+                                            <!-- PRICE -->
+                                            <div class="flex items-center gap-2">
+                                                <a href="#" class="collection-price-link">
+                                                    <span class="text-xl font-bold">$111.00</span>
+                                                    <span class="text-gray-400 line-through">$185.00</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- COLORS -->
+                                            <div class="flex gap-2 mt-3">
+                                                <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                                <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="trends-bg" style="height: 590px; padding: 170px 70px;">
+        <div class="text center py-20" style="height: 390px; width: 555px;">
+            <h3 class="lato-bold" style="color: #ff4b3b; font-size: 100px; text-align: center;">2023</h3>
+            <h2 class="lato-bold" style="font-size: 60px; color:#333333; text-align: center;">FASHION TRENDS</h2>
+            <h3 class="lato-bold" style="font-size: 24px; color:#777777; text-align: center; letter-spacing: 1.1rem;">
+                SPECIAL OFFER</h3>
+        </div>
+    </section>
+
+
+    <section id="exclusive" style="height: 1420px;">
+        <div class="container">
+            <div class="row" style="padding: 0 85px;">
+                <div class="text">
+                    <div class="title">
+                        <p class="lato-regular" style="color: #ff4b3b; font-size: 18px;">Exclusive Products</p>
+                        <h1 class="lato-bold" style="font-size:36px; color:#222222">SPECIAL PRODUCT</h1>
+                        <hr>
+                    </div>
+                </div>
+                <div class="sections">
+                    <ul class="lato-regular flex justify-center gap-6"
+                        style="margin-top: 20px; font-size: 18px; color: #212529;">
+                        <li data-exclusive-tab="new-arrival" class="is-active" role="button" tabindex="0">NEW ARRIVAL
+                        </li>
+                        <li data-exclusive-tab="featured" role="button" tabindex="0">FEATURED</li>
+                        <li data-exclusive-tab="special" role="button" tabindex="0">SPECIAL</li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <div class="card">
+                        <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+
+                            <div class="collection-image-wrap">
+                                <img id="mainImage" src="./assets/img/16.jpg" class="collection-main-image">
+                                <div class="collection-thumbs">
+                                    <img src="./assets/img/5.jpg" class="collection-thumb" alt="thumbnail one">
+                                    <img src="./assets/img/10.jpg" class="collection-thumb" alt="thumbnail two">
+                                    <img src="./assets/img/11.jpg" class="collection-thumb" alt="thumbnail three">
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                    ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                </div>
+                                <h5 class="text-lg text-gray-700 mb-1">
+                                    <a href="#" class="collection-title-link">belted dress</a>
+                                </h5>
+                                <div class="flex items-center gap-2">
+                                    <a href="#" class="collection-price-link">
+                                        <span class="text-xl font-bold">$111.00</span>
+                                        <span class="text-gray-400 line-through">$185.00</span>
+                                    </a>
+                                </div>
+                                <div class="flex gap-2 mt-3">
+                                    <span class="w-5 h-5 rounded-full bg-purple-500 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+                            <div class="collection-image-wrap">
+                                <img id="mainImage" src="./assets/img/11.jpg" class="collection-main-image">
+                                <div class="collection-thumbs">
+                                    <img src="./assets/img/6.jpg" class="collection-thumb" alt="thumbnail one">
+                                    <img src="./assets/img/10.jpg" class="collection-thumb" alt="thumbnail two">
+                                    <img src="./assets/img/11.jpg" class="collection-thumb" alt="thumbnail three">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                    ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                </div>
+                                <h5 class="text-lg text-gray-700 mb-1">
+                                    <a href="#" class="collection-title-link">belted dress</a>
+                                </h5>
+                                <div class="flex items-center gap-2">
+                                    <a href="#" class="collection-price-link">
+                                        <span class="text-xl font-bold">$111.00</span>
+                                        <span class="text-gray-400 line-through">$185.00</span>
+                                    </a>
+                                </div>
+                                <div class="flex gap-2 mt-3">
+                                    <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+                            <div class="collection-image-wrap">
+                                <img id="mainImage" src="./assets/img/12.jpg" class="collection-main-image">
+                                <div class="collection-thumbs">
+                                    <img src="./assets/img/8.jpg" class="collection-thumb" alt="thumbnail one">
+                                    <img src="./assets/img/10.jpg" class="collection-thumb" alt="thumbnail two">
+                                    <img src="./assets/img/11.jpg" class="collection-thumb" alt="thumbnail three">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                    ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                </div>
+                                <h5 class="text-lg text-gray-700 mb-1">
+                                    <a href="#" class="collection-title-link">belted dress</a>
+                                </h5>
+                                <div class="flex items-center gap-2">
+                                    <a href="#" class="collection-price-link">
+                                        <span class="text-xl font-bold">$111.00</span>
+                                        <span class="text-gray-400 line-through">$185.00</span>
+                                    </a>
+                                </div>
+                                <div class="flex gap-2 mt-3">
+                                    <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+                            <div class="collection-image-wrap">
+                                <img id="mainImage" src="./assets/img/13.jpg" class="collection-main-image">
+                                <div class="collection-thumbs">
+                                    <img src="./assets/img/1 (1).jpg" class="collection-thumb" alt="thumbnail one">
+                                    <img src="./assets/img/10.jpg" class="collection-thumb" alt="thumbnail two">
+                                    <img src="./assets/img/11.jpg" class="collection-thumb" alt="thumbnail three">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                    ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                </div>
+                                <h5 class="text-lg text-gray-700 mb-1">
+                                    <a href="#" class="collection-title-link">belted dress</a>
+                                </h5>
+                                <div class="flex items-center gap-2">
+                                    <a href="#" class="collection-price-link">
+                                        <span class="text-xl font-bold">$111.00</span>
+                                        <span class="text-gray-400 line-through">$185.00</span>
+                                    </a>
+                                </div>
+                                <div class="flex gap-2 mt-3">
+                                    <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+                            <div class="collection-image-wrap">
+                                <img id="mainImage" src="./assets/img/9.jpg" class="collection-main-image">
+                                <div class="collection-thumbs">
+                                    <img src="./assets/img/1 (1).jpg" class="collection-thumb" alt="thumbnail one">
+                                    <img src="./assets/img/10.jpg" class="collection-thumb" alt="thumbnail two">
+                                    <img src="./assets/img/11.jpg" class="collection-thumb" alt="thumbnail three">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                    ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                </div>
+                                <h5 class="text-lg text-gray-700 mb-1">
+                                    <a href="#" class="collection-title-link">belted dress</a>
+                                </h5>
+                                <div class="flex items-center gap-2">
+                                    <a href="#" class="collection-price-link">
+                                        <span class="text-xl font-bold">$111.00</span>
+                                        <span class="text-gray-400 line-through">$185.00</span>
+                                    </a>
+                                </div>
+                                <div class="flex gap-2 mt-3">
+                                    <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+                            <div class="collection-image-wrap">
+                                <img id="mainImage" src="./assets/img/8.jpg" class="collection-main-image">
+                                <div class="collection-thumbs">
+                                    <img src="./assets/img/1 (1).jpg" class="collection-thumb" alt="thumbnail one">
+                                    <img src="./assets/img/10.jpg" class="collection-thumb" alt="thumbnail two">
+                                    <img src="./assets/img/11.jpg" class="collection-thumb" alt="thumbnail three">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                    ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                </div>
+                                <h5 class="text-lg text-gray-700 mb-1">
+                                    <a href="#" class="collection-title-link">belted dress</a>
+                                </h5>
+                                <div class="flex items-center gap-2">
+                                    <a href="#" class="collection-price-link">
+                                        <span class="text-xl font-bold">$111.00</span>
+                                        <span class="text-gray-400 line-through">$185.00</span>
+                                    </a>
+                                </div>
+                                <div class="flex gap-2 mt-3">
+                                    <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+                            <div class="collection-image-wrap">
+                                <img id="mainImage" src="./assets/img/7.jpg" class="collection-main-image">
+                                <div class="collection-thumbs">
+                                    <img src="./assets/img/1 (1).jpg" class="collection-thumb" alt="thumbnail one">
+                                    <img src="./assets/img/10.jpg" class="collection-thumb" alt="thumbnail two">
+                                    <img src="./assets/img/11.jpg" class="collection-thumb" alt="thumbnail three">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                    ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                </div>
+                                <h5 class="text-lg text-gray-700 mb-1">
+                                    <a href="#" class="collection-title-link">belted dress</a>
+                                </h5>
+                                <div class="flex items-center gap-2">
+                                    <a href="#" class="collection-price-link">
+                                        <span class="text-xl font-bold">$111.00</span>
+                                        <span class="text-gray-400 line-through">$185.00</span>
+                                    </a>
+                                </div>
+                                <div class="flex gap-2 mt-3">
+                                    <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="w-full max-w-sm bg-white p-4" style="height: 595px; width: 323px;">
+                            <div class="collection-image-wrap">
+                                <img id="mainImage" src="./assets/img/6.jpg" class="collection-main-image">
+                                <div class="collection-thumbs">
+                                    <img src="./assets/img/1 (1).jpg" class="collection-thumb" alt="thumbnail one">
+                                    <img src="./assets/img/10.jpg" class="collection-thumb" alt="thumbnail two">
+                                    <img src="./assets/img/11.jpg" class="collection-thumb" alt="thumbnail three">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                                    ★ ★ ★ ★ <span class="text-gray-300">★</span>
+                                </div>
+                                <h5 class="text-lg text-gray-700 mb-1">
+                                    <a href="#" class="collection-title-link">belted dress</a>
+                                </h5>
+                                <div class="flex items-center gap-2">
+                                    <a href="#" class="collection-price-link">
+                                        <span class="text-xl font-bold">$111.00</span>
+                                        <span class="text-gray-400 line-through">$185.00</span>
+                                    </a>
+                                </div>
+                                <div class="flex gap-2 mt-3">
+                                    <span class="w-5 h-5 rounded-full bg-green-300 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-blue-900 cursor-pointer"></span>
+                                    <span class="w-5 h-5 rounded-full bg-red-400 cursor-pointer"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="height: 177px; padding: 50px 75px; margin-top: 50px;">
+        <div class="container" style="height: 170px;">
+            <div class="row flex justify-center items-center" style="gap: 250px;">
+                <div class="shipping">
+                    <div class="context flex justify-center items-center gap-4">
+                        <i class="fa-regular fa-truck text-3xl" style="color: #ff4b3b; font-size: 45px;"></i>
+                        <div class="text">
+                            <a href="#"><h4 class="lato-bold" style="font-size: 18px; color: #333333;">FREE SHIPPING</h4></a>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Free Shipping World Wide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="online">
+                    <div class="context flex justify-center items-center gap-4">
+                        <i class="fa-regular fa-clock text-3xl" style="color: #ff4b3b; font-size: 45px;"></i>
+                        <div class="text">
+                            <a href="#"><h4 class="lato-bold" style="font-size: 18px; color: #333333;">24X7 SERVICE</h4></a>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Online Service for 24 Hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="festival">
+                    <div class="context flex justify-center items-center gap-4">
+                        <i class="fa-solid fa-bullhorn text-3xl" style="color: #ff4b3b; font-size: 45px;"></i>
+                        <div class="text">
+                            <h4 class="lato-bold" style="font-size: 18px; color: #333333;">FESTIVAL OFFER</h4>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">New Online Special Festival Offer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <button id="scroll-to-top" type="button" aria-label="Scroll to top">
+        <i class="fa-solid fa-angles-up" aria-hidden="true"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
     <script src="./assets/script/script.js"></script>
