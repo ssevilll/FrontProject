@@ -5,6 +5,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const stickyStartOffset = 300;
     const scrollTopTriggerOffset = 280;
     const scrollToTopButton = document.getElementById("scroll-to-top");
+    const welcomeModal = document.getElementById("welcome-modal");
+    const welcomeModalClose = document.getElementById("welcome-modal-close");
+    const welcomeModalCta = document.getElementById("welcome-modal-cta");
+
+    if (welcomeModal) {
+        const closeWelcomeModal = function () {
+            welcomeModal.classList.remove("is-open");
+            welcomeModal.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("modal-open");
+        };
+
+        const openWelcomeModal = function () {
+            welcomeModal.classList.add("is-open");
+            welcomeModal.setAttribute("aria-hidden", "false");
+            document.body.classList.add("modal-open");
+        };
+
+        openWelcomeModal();
+
+        if (welcomeModalClose) {
+            welcomeModalClose.addEventListener("click", closeWelcomeModal);
+        }
+
+        if (welcomeModalCta) {
+            welcomeModalCta.addEventListener("click", closeWelcomeModal);
+        }
+
+        welcomeModal.addEventListener("click", function (event) {
+            if (event.target === welcomeModal) {
+                closeWelcomeModal();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && welcomeModal.classList.contains("is-open")) {
+                closeWelcomeModal();
+            }
+        });
+    }
 
     if (scrollToTopButton) {
         const syncScrollTopButton = function () {
@@ -86,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (isCustomDropend) {
                     menu.style.left = "100%";
                     menu.style.top = "0";
-                    menu.style.marginLeft = "4px";
+                    menu.style.marginLeft = "0";
                     menu.style.marginTop = "0";
                 } else {
                     // For main dropdowns, use default positioning
@@ -427,6 +466,166 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!collectionCarousel.contains(event.relatedTarget)) {
                 resumeCarousel();
             }
+        });
+    }
+
+    const ourCollectionTrack = document.getElementById("carousel-track");
+
+    if (ourCollectionTrack && ourCollectionTrack.children.length > 3) {
+        let isSliding = false;
+        let autoplayTimer = null;
+        const slideDurationMs = 500;
+        const autoplayDelayMs = 2600;
+
+        const slideOneCard = function () {
+            if (isSliding || !ourCollectionTrack.firstElementChild) {
+                return;
+            }
+
+            const firstCard = ourCollectionTrack.firstElementChild;
+            const shiftAmount = firstCard.getBoundingClientRect().width;
+
+            if (!shiftAmount) {
+                return;
+            }
+
+            isSliding = true;
+            ourCollectionTrack.style.transition = "transform " + slideDurationMs + "ms ease";
+            ourCollectionTrack.style.transform = "translateX(-" + shiftAmount + "px)";
+
+            window.setTimeout(function () {
+                ourCollectionTrack.appendChild(firstCard);
+                ourCollectionTrack.style.transition = "none";
+                ourCollectionTrack.style.transform = "translateX(0)";
+
+                // Force reflow so next slide transition is applied correctly.
+                void ourCollectionTrack.offsetWidth;
+
+                isSliding = false;
+            }, slideDurationMs + 30);
+        };
+
+        const startOurCollectionAutoplay = function () {
+            if (autoplayTimer) {
+                return;
+            }
+
+            autoplayTimer = window.setInterval(slideOneCard, autoplayDelayMs);
+        };
+
+        const stopOurCollectionAutoplay = function () {
+            if (!autoplayTimer) {
+                return;
+            }
+
+            window.clearInterval(autoplayTimer);
+            autoplayTimer = null;
+        };
+
+        startOurCollectionAutoplay();
+
+        ourCollectionTrack.addEventListener("mouseenter", stopOurCollectionAutoplay);
+        ourCollectionTrack.addEventListener("mouseleave", startOurCollectionAutoplay);
+        ourCollectionTrack.addEventListener("focusin", stopOurCollectionAutoplay);
+        ourCollectionTrack.addEventListener("focusout", function (event) {
+            if (!ourCollectionTrack.contains(event.relatedTarget)) {
+                startOurCollectionAutoplay();
+            }
+        });
+
+        document.addEventListener("visibilitychange", function () {
+            if (document.hidden) {
+                stopOurCollectionAutoplay();
+            } else {
+                startOurCollectionAutoplay();
+            }
+        });
+    }
+
+    const ourCollectionCards = document.querySelectorAll("#ourcollection #carousel-track > .w-1\\/3 > div");
+
+    if (ourCollectionCards.length) {
+        const tileColumns = 6;
+        const tileRows = 5;
+        const tileStepMs = 52;
+
+        const ensureImageWrapper = function (cardBody) {
+            let wrapper = cardBody.querySelector(".img-wrapper");
+
+            if (wrapper) {
+                return wrapper;
+            }
+
+            let imageLink = null;
+            const directChildren = cardBody.children;
+
+            for (let i = 0; i < directChildren.length; i += 1) {
+                const child = directChildren[i];
+                if (child.tagName === "A" && child.querySelector("img")) {
+                    imageLink = child;
+                    break;
+                }
+            }
+
+            if (!imageLink) {
+                imageLink = cardBody.querySelector("a img")?.closest("a") || null;
+            }
+
+            if (!imageLink) {
+                return null;
+            }
+
+            wrapper = document.createElement("div");
+            wrapper.className = "img-wrapper";
+            imageLink.parentNode.insertBefore(wrapper, imageLink);
+            wrapper.appendChild(imageLink);
+
+            return wrapper;
+        };
+
+        const ensureOverlayLayer = function (wrapper, className) {
+            let layer = wrapper.querySelector(".overlay." + className);
+
+            if (!layer) {
+                layer = document.createElement("div");
+                layer.className = "overlay " + className;
+                wrapper.appendChild(layer);
+            }
+
+            return layer;
+        };
+
+        const fillOverlayTiles = function (layer) {
+            if (layer.dataset.tilesReady === "true") {
+                return;
+            }
+
+            const cells = document.createDocumentFragment();
+
+            for (let row = 0; row < tileRows; row += 1) {
+                for (let column = 0; column < tileColumns; column += 1) {
+                    const cell = document.createElement("span");
+                    cell.className = "overlay-cell";
+                    cell.style.setProperty("--tile-delay", (row + column) * tileStepMs + "ms");
+                    cells.appendChild(cell);
+                }
+            }
+
+            layer.appendChild(cells);
+            layer.dataset.tilesReady = "true";
+        };
+
+        ourCollectionCards.forEach(function (cardBody) {
+            const wrapper = ensureImageWrapper(cardBody);
+            if (!wrapper) {
+                return;
+            }
+
+            const lightLayer = ensureOverlayLayer(wrapper, "overlay-light");
+            const darkLayer = ensureOverlayLayer(wrapper, "overlay-dark");
+
+            fillOverlayTiles(lightLayer);
+            fillOverlayTiles(darkLayer);
         });
     }
 

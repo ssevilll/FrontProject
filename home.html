@@ -19,6 +19,31 @@
 
 <body>
 
+    <div id="welcome-modal" class="welcome-modal" aria-hidden="true">
+        <div class="welcome-modal-card coupon-style">
+
+            <!-- Close -->
+            <button id="welcome-modal-close" class="welcome-modal-close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- TOP SALE BANNER -->
+            <div class="coupon-banner">
+                <div class="cupon-img">
+                    <img src="./assets/img/cupon-modal.png" height="115px" width="685px" alt="coupon">
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <h2 class="newsletter-title lato-bold">NEWSLETTER</h2>
+
+            <input type="email" placeholder="Enter your email" class="newsletter-input">
+
+            <a href="#" class="newsletter-btn subs lato-bold" style="font-size: 14px;">SUBSCRIBE</a>
+
+        </div>
+    </div>
+
     <section id="header">
         <section id="top-header" class="bg-gray-100 px-4 flex justify-between items-center" style="height: 50px;">
             <div class="container mx-auto flex justify-between items-center px-6">
@@ -44,15 +69,15 @@
                     </div>
                     <div class="account">
                         <a href="#"
-                            class="account-trigger flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800"
+                            class="account-trigger flex items-center gap-1 text-sm hover:text-gray-800"
                             aria-haspopup="true" aria-expanded="false">
                             <i class="fa-solid fa-user" style="color:#999999"></i>
                             <p style="color:#999999">My Account</p>
                         </a>
                         <div class="account-dropdown">
-                            <a href="#" class="account-link">Login</a>
-                            <a href="#" class="account-link">Register</a>
-                            <a href="#" class="account-link">Logout</a>
+                            <a href="#" class="account-link lato-regular" style="font-size: 15px; color: #333333;">Login</a>
+                            <a href="#" class="account-link lato-regular" style="font-size: 15px; color: #333333;">Register</a>
+                            <a href="#" class="account-link lato-regular" style="font-size: 15px; color: #333333;">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -102,13 +127,13 @@
                                         </svg>
                                     </button>
                                     <div id="homeDropdown"
-                                        class="nav-dropdown-layer nav-dropdown-main hidden w-52 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-52 divide-y divide-gray-100 bg-white">
                                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="homeDropdownButton">
                                             <li class="relative">
                                                 <button id="homeDropendOneButton" data-dropend-toggle="homeDropendOne"
                                                     type="button"
                                                     class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
-                                                    Fashion Home
+                                                    Fashion Home <span class=" text-xs ml-2 px-1 py-1 lato-bold" style="color: #ff4b3b;">NEW</span>
                                                     <svg class="ms-auto h-4 w-4" aria-hidden="true"
                                                         xmlns="http://www.w3.org/2000/svg" fill="none"
                                                         viewBox="0 0 24 24">
@@ -117,7 +142,7 @@
                                                     </svg>
                                                 </button>
                                                 <div id="homeDropendOne"
-                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
                                                     <ul class="py-2 text-sm text-gray-700"
                                                         aria-labelledby="homeDropendOneButton">
                                                         <li><a href="#"
@@ -148,7 +173,7 @@
                                                     </svg>
                                                 </button>
                                                 <div id="homeDropendTwo"
-                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
                                                     <ul class="py-2 text-sm text-gray-700"
                                                         aria-labelledby="homeDropendTwoButton">
                                                         <li><a href="#"
@@ -176,7 +201,7 @@
                                                     </svg>
                                                 </button>
                                                 <div id="homeDropendThree"
-                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
                                                     <ul class="py-2 text-sm text-gray-700"
                                                         aria-labelledby="homeDropendThreeButton">
                                                         <li><a href="#"
@@ -210,7 +235,7 @@
                                                     </svg>
                                                 </button>
                                                 <div id="homeDropendFive"
-                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 rounded-lg bg-white shadow-sm">
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
                                                     <ul class="py-2 text-sm text-gray-700"
                                                         aria-labelledby="homeDropendFiveButton">
                                                         <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
@@ -253,7 +278,7 @@
                                         </svg>
                                     </button>
                                     <div id="shopDropdown"
-                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
                                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="shopDropdownButton">
                                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Grid</a></li>
                                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop List</a></li>
@@ -274,7 +299,7 @@
                                         </svg>
                                     </button>
                                     <div id="productsDropdown"
-                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
                                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="productsDropdownButton">
                                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Box</a>
                                             </li>
@@ -298,7 +323,7 @@
                                         </svg>
                                     </button>
                                     <div id="featuresDropdown"
-                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
                                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="featuresDropdownButton">
                                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature One</a>
                                             </li>
@@ -319,7 +344,7 @@
                                         </svg>
                                     </button>
                                     <div id="pagesDropdown"
-                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
                                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="pagesDropdownButton">
                                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">About Us</a></li>
                                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
@@ -338,7 +363,7 @@
                                         </svg>
                                     </button>
                                     <div id="blogsDropdown"
-                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow-sm">
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
                                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="blogsDropdownButton">
                                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Grid</a></li>
                                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Details</a>
@@ -355,15 +380,36 @@
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
                             </div>
-                            <div>
-                                <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                            <div class="settings">
+                                <a href="#" class="settings-trigger flex items-center gap-1 text-gray-600 hover:text-gray-800"
+                                    aria-haspopup="true" aria-expanded="false">
                                     <i class="fa-solid fa-gear"></i>
                                 </a>
+                                <div class="settings-dropdown">
+                                    <p class="settings-group-title">LANGUAGE</p>
+                                    <div class="options ml-3" style="display: flex; flex-direction: column;">
+                                        <a href="#" class="settings-option">English</a>
+                                        <a href="#" class="settings-option">Français</a>
+                                    </div>
+
+                                    <p class="settings-group-title">CURRENCY</p>
+                                    <div class="options ml-3" style="display: flex; flex-direction: column;">
+                                        <a href="#" class="settings-option">$ USD</a>
+                                        <a href="#" class="settings-option">₹ INR</a>
+                                        <a href="#" class="settings-option">€ EUR</a>
+                                        <a href="#" class="settings-option">£ GBP</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
+                            <div class="cart-container relative">
                                 <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
+                                <div class="cart-dropdown absolute top-full right-0 mt-2 w-64 bg-white">
+                                    <div class="p-4">
+                                        <p class="text-sm lato-regular mt-2" style="font-size: 16px; color: #222222;">Your cart is currently empty.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -454,7 +500,18 @@
                             class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
                             <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery One</a></li>
                             <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Two</a></li>
-                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three</a></li>
+                            <li class="relative group">
+                                <a href="#" class="flex items-center justify-between rounded px-3 py-2 hover:bg-gray-100">
+                                    Gallery Three
+                                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                                </a>
+                                <ul
+                                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three One</a></li>
+                                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three Two</a></li>
+                                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three Three</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Four</a></li>
                         </ul>
                     </li>
@@ -559,28 +616,20 @@
             </div>
             <!-- Slider controls -->
             <button type="button"
-                class="absolute top-0 start-0 z-10 flex h-full items-center justify-center px-4 opacity-0 -translate-x-6 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-focus-within:opacity-100 group-focus-within:translate-x-0"
+                class="carousel-control carousel-control-prev absolute top-0 start-0 z-10 flex h-full items-center justify-center px-4"
                 data-carousel-prev>
                 <span
-                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m15 19-7-7 7-7" />
-                    </svg>
+                    class="carousel-control-circle inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 transition-colors duration-300 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                    <i class="carousel-control-icon fa-solid fa-chevron-left text-white text-base transition-colors duration-300" aria-hidden="true"></i>
                     <span class="sr-only">Previous</span>
                 </span>
             </button>
             <button type="button"
-                class="absolute top-0 end-0 z-10 flex h-full items-center justify-center px-4 opacity-0 translate-x-6 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-focus-within:opacity-100 group-focus-within:translate-x-0"
+                class="carousel-control carousel-control-next absolute top-0 end-0 z-10 flex h-full items-center justify-center px-4"
                 data-carousel-next>
                 <span
-                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m9 5 7 7-7 7" />
-                    </svg>
+                    class="carousel-control-circle inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 transition-colors duration-300 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                    <i class="carousel-control-icon fa-solid fa-chevron-right text-white text-base transition-colors duration-300" aria-hidden="true"></i>
                     <span class="sr-only">Next</span>
                 </span>
             </button>
@@ -1576,8 +1625,11 @@
                     <div class="context flex justify-center items-center gap-4">
                         <i class="fa-regular fa-truck text-3xl" style="color: #ff4b3b; font-size: 45px;"></i>
                         <div class="text">
-                            <a href="#"><h4 class="lato-bold" style="font-size: 18px; color: #333333;">FREE SHIPPING</h4></a>
-                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Free Shipping World Wide</p>
+                            <a href="#">
+                                <h4 class="lato-bold title" style="font-size: 18px; color: #333333;">FREE SHIPPING</h4>
+                            </a>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Free Shipping World Wide
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1585,8 +1637,11 @@
                     <div class="context flex justify-center items-center gap-4">
                         <i class="fa-regular fa-clock text-3xl" style="color: #ff4b3b; font-size: 45px;"></i>
                         <div class="text">
-                            <a href="#"><h4 class="lato-bold" style="font-size: 18px; color: #333333;">24X7 SERVICE</h4></a>
-                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Online Service for 24 Hours</p>
+                            <a href="#">
+                                <h4 class="lato-bold title" style="font-size: 18px; color: #333333;">24X7 SERVICE</h4>
+                            </a>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Online Service for 24 Hours
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1594,8 +1649,11 @@
                     <div class="context flex justify-center items-center gap-4">
                         <i class="fa-solid fa-bullhorn text-3xl" style="color: #ff4b3b; font-size: 45px;"></i>
                         <div class="text">
-                            <h4 class="lato-bold" style="font-size: 18px; color: #333333;">FESTIVAL OFFER</h4>
-                            <p class="lato-regular" style="font-size: 14px; color: #777777;">New Online Special Festival Offer</p>
+                            <a href="#">
+                                <h4 class="lato-bold title" style="font-size: 18px; color: #333333;">FESTIVAL OFFER</h4>
+                            </a>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">New Online Special Festival
+                                Offer</p>
                         </div>
                     </div>
                 </div>
@@ -1603,6 +1661,454 @@
         </div>
     </section>
 
+
+    <section id="ourcollection">
+
+        <div class="introtext flex justify-center items-center mb-3" style="padding: 0 85px; margin-top: 50px;">
+            <div class="title">
+                <p class="lato-regular" style="color: #ff4b3b; font-size: 18px; text-align: center;">Our
+                    Collection</p>
+                <h1 class="lato-bold" style="font-size:36px; color:#222222">SPECIAL PRODCUTS</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="overflow-hidden w-full max-w-4xl mx-auto">
+            <div id="carousel-track" class="flex transition-transform duration-500">
+
+
+                <!-- 6 cards -->
+                <div class="w-1/3 p-2">
+
+
+                    <div class="bg-neutral-primary-soft block max-w-sm p-6 rounded-base shadow-xs"
+                        style="width: 440px; height: 425px;">
+                        <div class="img-wrapper">
+                            <a href="#">
+                                <img class="rounded-base" height="255px" width="435px"
+                                    src="./assets/img/collection (1).jpg" alt="collection" />
+                            </a>
+                            <!-- Layer 1 -->
+                            <div class="overlay overlay-light"></div>
+
+                            <!-- Layer 2 -->
+                            <div class="overlay overlay-dark"></div>
+                        </div>
+                        <div class="text">
+                            <div class="date lato-regular"
+                                style="font-size: 18px; color: #ff4b3b; text-align: center; margin-top: 20px;">
+                                <p>29 JANUARY 2018</p>
+                            </div>
+                            <a href="#">
+                                <h5 class="mt-2 mb-2 text-2xl font-semibold tracking-tight text-heading lato-bold"
+                                    style="text-align: center; color: #222222; font-size: 18px;">
+                                    LOREM IPSUM DOLOR SIT CONSECTETUR ADIPISCING ELIT</h5>
+                            </a>
+                            <hr>
+                            <div class="author">
+
+                                <p class="mb-6 mt-2 text-body lato-regular"
+                                    style="color:#777777; font-size: 14px; text-align: center;">by: John Dio, 2 Comment
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="w-1/3 p-2">
+                    <div class="bg-neutral-primary-soft block max-w-sm p-6 rounded-base shadow-xs"
+                        style="width: 440px; height: 425px;">
+                        <a href="#">
+                            <img class="rounded-base" height="255px" width="435px" src="./assets/img/collection (2).jpg"
+                                alt="collection" />
+                        </a>
+                        <div class="text">
+                            <div class="date lato-regular"
+                                style="font-size: 18px; color: #ff4b3b; text-align: center; margin-top: 20px;">
+                                <p>29 JANUARY 2018</p>
+                            </div>
+                            <a href="#">
+                                <h5 class="mt-2 mb-2 text-2xl font-semibold tracking-tight text-heading lato-bold"
+                                    style="text-align: center; color: #222222; font-size: 18px;">
+                                    LOREM IPSUM DOLOR SIT CONSECTETUR ADIPISCING ELIT</h5>
+                            </a>
+                            <hr>
+                            <div class="author">
+
+                                <p class="mb-6 mt-2 text-body lato-regular"
+                                    style="color:#777777; font-size: 14px; text-align: center;">by: John Dio, 2 Comment
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="w-1/3 p-2">
+                    <div class="bg-neutral-primary-soft block max-w-sm p-6 rounded-base shadow-xs"
+                        style="width: 440px; height: 425px;">
+                        <a href="#">
+                            <img class="rounded-base" height="255px" width="435px" src="./assets/img/collection (3).jpg"
+                                alt="collection" />
+                        </a>
+                        <div class="text">
+                            <div class="date lato-regular"
+                                style="font-size: 18px; color: #ff4b3b; text-align: center; margin-top: 20px;">
+                                <p>29 JANUARY 2018</p>
+                            </div>
+                            <a href="#">
+                                <h5 class="mt-2 mb-2 text-2xl font-semibold tracking-tight text-heading lato-bold"
+                                    style="text-align: center; color: #222222; font-size: 18px;">
+                                    LOREM IPSUM DOLOR SIT CONSECTETUR ADIPISCING ELIT</h5>
+                            </a>
+                            <hr>
+                            <div class="author">
+
+                                <p class="mb-6 mt-2 text-body lato-regular"
+                                    style="color:#777777; font-size: 14px; text-align: center;">by: John Dio, 2 Comment
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="w-1/3 p-2">
+                    <div class="bg-neutral-primary-soft block max-w-sm p-6 rounded-base shadow-xs"
+                        style="width: 440px; height: 425px;">
+                        <a href="#">
+                            <img class="rounded-base" height="255px" width="435px" src="./assets/img/collection (4).jpg"
+                                alt="collection" />
+                        </a>
+                        <div class="text">
+                            <div class="date lato-regular"
+                                style="font-size: 18px; color: #ff4b3b; text-align: center; margin-top: 20px;">
+                                <p>29 JANUARY 2018</p>
+                            </div>
+                            <a href="#">
+                                <h5 class="mt-2 mb-2 text-2xl font-semibold tracking-tight text-heading lato-bold"
+                                    style="text-align: center; color: #222222; font-size: 18px;">
+                                    LOREM IPSUM DOLOR SIT CONSECTETUR ADIPISCING ELIT</h5>
+                            </a>
+                            <hr>
+                            <div class="author">
+
+                                <p class="mb-6 mt-2 text-body lato-regular"
+                                    style="color:#777777; font-size: 14px; text-align: center;">by: John Dio, 2 Comment
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="w-1/3 p-2">
+                    <div class="bg-neutral-primary-soft block max-w-sm p-6 rounded-base shadow-xs"
+                        style="width: 440px; height: 425px;">
+                        <a href="#">
+                            <img class="rounded-base" height="255px" width="435px" src="./assets/img/collection (5).jpg"
+                                alt="collection" />
+                        </a>
+                        <div class="text">
+                            <div class="date lato-regular"
+                                style="font-size: 18px; color: #ff4b3b; text-align: center; margin-top: 20px;">
+                                <p>29 JANUARY 2018</p>
+                            </div>
+                            <a href="#">
+                                <h5 class="mt-2 mb-2 text-2xl font-semibold tracking-tight text-heading lato-bold"
+                                    style="text-align: center; color: #222222; font-size: 18px;">
+                                    LOREM IPSUM DOLOR SIT CONSECTETUR ADIPISCING ELIT</h5>
+                            </a>
+                            <hr>
+                            <div class="author">
+
+                                <p class="mb-6 mt-2 text-body lato-regular"
+                                    style="color:#777777; font-size: 14px; text-align: center;">by: John Dio, 2 Comment
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="w-1/3 p-2">
+                    <div class="bg-neutral-primary-soft block max-w-sm p-6 rounded-base shadow-xs"
+                        style="width: 440px; height: 425px;">
+                        <a href="#">
+                            <img class="rounded-base" height="255px" width="435px" src="./assets/img/collection (6).jpg"
+                                alt="collection" />
+                        </a>
+                        <div class="text">
+                            <div class="date lato-regular"
+                                style="font-size: 18px; color: #ff4b3b; text-align: center; margin-top: 20px;">
+                                <p>29 JANUARY 2018</p>
+                            </div>
+                            <a href="#">
+                                <h5 class="mt-2 mb-2 text-2xl font-semibold tracking-tight text-heading lato-bold"
+                                    style="text-align: center; color: #222222; font-size: 18px;">
+                                    LOREM IPSUM DOLOR SIT CONSECTETUR ADIPISCING ELIT</h5>
+                            </a>
+                            <hr>
+                            <div class="author">
+
+                                <p class="mb-6 mt-2 text-body lato-regular"
+                                    style="color:#777777; font-size: 14px; text-align: center;">by: John Dio, 2 Comment
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="instagram">
+        <div class="container mt-3 mb-1">
+            <div class="row">
+                <div class="title">
+                    <h2 class="lato-bold" style="font-size: 36px; color: #222222; text-align: center;">#INSTAGRAM</h2>
+                </div>
+                <div class="posts flex justify-center items-center mt-3">
+                    <div class="post">
+                        <a href="#">
+                            <img src="./assets/img/instagram (1).jpg" alt="instagram post" />
+                            <i class="fa-brands fa-instagram insta-hover-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="post">
+                        <a href="#">
+                            <img src="./assets/img/instagram (2).jpg" alt="instagram post" />
+                            <i class="fa-brands fa-instagram insta-hover-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="post">
+                        <a href="#">
+                            <img src="./assets/img/instagram (3).jpg" alt="instagram post" />
+                            <i class="fa-brands fa-instagram insta-hover-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="post">
+                        <a href="#">
+                            <img src="./assets/img/instagram (4).jpg" alt="instagram post" />
+                            <i class="fa-brands fa-instagram insta-hover-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="post">
+                        <a href="#">
+                            <img src="./assets/img/instagram (5).jpg" alt="instagram post" />
+                            <i class="fa-brands fa-instagram insta-hover-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="post">
+                        <a href="#">
+                            <img src="./assets/img/instagram (6).jpg" alt="instagram post" />
+                            <i class="fa-brands fa-instagram insta-hover-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="post">
+                        <a href="#">
+                            <img src="./assets/img/instagram (7).jpg" alt="instagram post" />
+                            <i class="fa-brands fa-instagram insta-hover-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="partners">
+        <div class="container">
+            <div class="row" style="margin: 90px;">
+                <div class="companies items-center mt-6" style="display: flex; justify-content: space-around;">
+                    <div class="company">
+                        <a href="#">
+                            <img src="./assets/img/partner (1).png" alt="company logo" />
+                        </a>
+                    </div>
+                    <div class="company">
+                        <a href="#">
+                            <img src="./assets/img/partner (2).png" alt="company logo" />
+                        </a>
+                    </div>
+                    <div class="company">
+                        <a href="#">
+                            <img src="./assets/img/partner (3).png" alt="company logo" />
+                        </a>
+                    </div>
+                    <div class="company">
+                        <a href="#">
+                            <img src="./assets/img/partner (4).png" alt="company logo" />
+                        </a>
+                    </div>
+                    <div class="company">
+                        <a href="#">
+                            <img src="./assets/img/partner (5).png" alt="company logo" />
+                        </a>
+                    </div>
+                    <div class="company">
+                        <a href="#">
+                            <img src="./assets/img/partner (6).png" alt="company logo" />
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class=" text-gray-700" style="height:490px; padding: 0 !important; background-color: #f9f9f9;">
+        <!-- Newsletter -->
+        <div class="container" style="padding: 35px 70px;">
+            <div class="row">
+
+
+                <div class="w-full border-b px-1 md:px-2" style="border-color: #dddddd;">
+                    <div class="flex flex-col md:flex-row items-center justify-between" style="margin-bottom: 35px;">
+
+                        <div>
+                            <h2 class="text-lg lato-bold" style="font-size: 18px; color: #222222;">KNOW IT ALL FIRST!
+                            </h2>
+                            <p class="text-sm text-gray-500 lato-regular" style="font-size: 14px; color: #777777;">
+                                Never Miss Anything From Multikart By Signing Up To Our Newsletter.
+                            </p>
+                        </div>
+
+                        <div class="flex w-full md:w-auto gap-3 ">
+                            <input type="email" placeholder="Enter your email"
+                                class="footer-email-input w-full md:w-80 px-4 py-2 outline-none"
+                                style="width: 342px; height: 52px;" />
+                            <button class="footer-subscribe-btn lato-bold px-6 py-2"
+                                style="width: 145px; height: 50px; background-color: #ff4b3b; font-size: 14px; color: #fff; letter-spacing: 1.2px;">
+                                <span class="footer-subscribe-label">SUBSCRIBE</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Main Footer -->
+                <div class="footer-main w-full md:px-2 py-12 mt-6">
+
+                    <div class="about footer-about">
+
+                        <!-- Logo + About -->
+                        <div class="logo-about">
+                            <h2 class="text-2xl font-bold flex items-center gap-2">
+                                <a href="#">
+                                <img src="./assets/img/logo.png" alt="logo">
+                                </a>
+                            </h2>
+                            <a href="#" class="logo-about-link">
+                                <p class="mt-5 text-sm leading-6 mb-8 leto-regular hover:underline"
+                                    style="line-height: 2.5; font-size: 14px; color: #777777;">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam.
+                                </p>
+                            </a>
+
+                            <!-- Social icons -->
+                            <div class="flex gap-8 mt-8 text-lg">
+                                <i class="fab fa-facebook-f cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-google-plus-g cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-twitter cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-instagram cursor-pointer hover:text-red-500"></i>
+                                <i class="fas fa-rss cursor-pointer hover:text-red-500"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sections"
+                        style="display: flex; gap: 100px; justify-content: center; gap: 120px; margin-left: 40px; ">
+
+                        <!-- My Account -->
+                        <div class="footer-my-account">
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">MY ACCOUNT</h3>
+                            <ul class="space-y-2 text-sm leto-regular mt-8" style="font-size: 14px; color: #777777;">
+                                <li><a href="#" class="hover:text-red-500 mt-8">Womens</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Clothing</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Accessories</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Featured</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Why We Choose -->
+                        <div>
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">WHY WE CHOOSE</h3>
+                            <ul class="space-y-2 text-sm leto-regular mt-8" style="font-size: 14px; color: #777777;">
+                                <li><a href="#" class="hover:text-red-500 mt-8">Shipping & Return</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Secure Shopping</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Gallary</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Affiliates</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Contacts</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Store Info -->
+                        <div style="max-width: 270px;">
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">STORE INFORMATION</h3>
+                            <ul class="space-y-3 text-sm leto-regular mt-8 store-info"
+                                style="font-size: 14px; color: #777777; letter-spacing: 1.4px; line-height: 1.6;">
+                                <li class="flex items-start gap-4">
+                                    <a href="#">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Multikart Demo Store, Demo Store India
+                                        345-659
+                                    </a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="callto:123-456-7898">
+                                        <i class="fa-solid fa-phone"></i>
+                                        Call Us: 123-456-7898
+                                    </a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="mailto:support@Fiot.Com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        Email Us: Support@Fiot.Com</a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="faxto:123456">
+                                        <i class="fa-solid fa-fax"></i>
+                                        Fax: 123456</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <section id="copyrights">
+
+        <div class="py-4" style="margin:8px 55px;">
+            <div
+                class="w-full px-1 md:px-2 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+
+                <p>© 2023-24 themeforest powered by pixelstrap</p>
+
+                <div class="flex gap-3 mt-3 md:mt-0">
+                    <a href="#"> <img src="./assets/img/payment (1).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (2).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (3).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (4).png" class="h-6" /> </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
     <button id="scroll-to-top" type="button" aria-label="Scroll to top">
