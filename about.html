@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section id="header">
+        <section id="top-header" class="bg-gray-100 px-4 flex justify-between items-center" style="height: 50px;">
+            <div class="container mx-auto flex justify-between items-center px-6">
+
+                <div class="left-section flex justify-center items-center gap-5">
+
+                    <div class="message text-sm text-gray-600">
+                        <p style="color:#999999">Welcome to Our store Multikart!</p>
+                    </div>
+                    <div class="contact text-sm text-gray-600">
+                        <p style="color:#999999"><i class="fa-solid fa-phone" style="color:#999999"></i> Call Us: 123 -
+                            456
+                            - 7890</p>
+                    </div>
+                </div>
+                <div class="right-section flex justify-center items-center gap-4">
+
+                    <div class="wish-list">
+                        <a href="#" class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800">
+                            <i class="fa-solid fa-heart" style="color:#999999"></i>
+                            <p style="color:#999999">Wishlist</p>
+                        </a>
+                    </div>
+                    <div class="account">
+                        <a href="#" class="account-trigger flex items-center gap-1 text-sm hover:text-gray-800"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-user" style="color:#999999"></i>
+                            <p style="color:#999999">My Account</p>
+                        </a>
+                        <div class="account-dropdown">
+                            <a href="#" class="account-link lato-regular"
+                                style="font-size: 15px; color: #333333;">Login</a>
+                            <a href="#" class="account-link lato-regular"
+                                style="font-size: 15px; color: #333333;">Register</a>
+                            <a href="#" class="account-link lato-regular"
+                                style="font-size: 15px; color: #333333;">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="navbar" style="position: relative; z-index: 3000;">
+            <nav class="sticky top-0 left-0 w-full border-b border-gray-200 bg-white"
+                style="height: 115px; z-index: 3000;">
+                <div class="mx-auto flex h-full w-full flex-wrap items-center justify-between px-4 md:px-6 lg:px-8">
+                    <div class="flex items-center gap-4">
+                        <button data-drawer-target="sidebar-menu" data-drawer-toggle="sidebar-menu"
+                            aria-controls="sidebar-menu" class="text-gray-800">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                        <a href="#" class="m-0 p-0">
+                            <img src="./assets/img/logo.png" alt="Site logo" class="h-10 w-auto">
+                        </a>
+                    </div>
+
+                    <button data-collapse-toggle="navbar-multi-level-dropdown" type="button"
+                        class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm text-gray-500 hover:bg-gray-100 md:hidden"
+                        aria-controls="navbar-multi-level-dropdown" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                d="M5 7h14M5 12h14M5 17h14" />
+                        </svg>
+                    </button>
+
+                    <div class="right-side flex w-full items-center justify-between md:w-auto gap-5"
+                        style="color: #212121; font-size: 18px">
+
+
+                        <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level-dropdown">
+                            <ul
+                                class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:ms-12 md:flex-row md:space-x-8 md:border-0 md:bg-white">
+                                <li>
+                                    <button id="homeDropdownButton" data-dropdown-toggle="homeDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Home
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="homeDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-52 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="homeDropdownButton">
+                                            <li class="relative">
+                                                <button id="homeDropendOneButton" data-dropend-toggle="homeDropendOne"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Fashion Home <span class=" text-xs ml-2 px-1 py-1 lato-bold"
+                                                        style="color: #ff4b3b;">NEW</span>
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendOne"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendOneButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendTwoButton" data-dropend-toggle="homeDropendTwo"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Furniture Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendTwo"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendTwoButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                1</a></li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                2</a></li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendThreeButton"
+                                                    data-dropend-toggle="homeDropendThree" type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Minimal Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendThree"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendThreeButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Electronics
+                                                    Home</a>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendFiveButton" data-dropend-toggle="homeDropendFive"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Watch Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendFive"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendFiveButton">
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shoes Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bags Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Beauty Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Jewelry Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Flowers Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Kids Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pets Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Sports Home</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="shopDropdownButton" data-dropdown-toggle="shopDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Shop
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="shopDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="shopDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Grid</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop List</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Filter</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="productsDropdownButton" data-dropdown-toggle="productsDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Products
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="productsDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="productsDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Box</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Slider</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product
+                                                    Gallery</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="featuresDropdownButton" data-dropdown-toggle="featuresDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Features
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="featuresDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="featuresDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature One</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature Two</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="pagesDropdownButton" data-dropdown-toggle="pagesDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Pages
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="pagesDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="pagesDropdownButton">
+                                            <li><a href="./about.html" class="block px-4 py-2 hover:bg-gray-100">About
+                                                    Us</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="blogsDropdownButton" data-dropdown-toggle="blogsDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Blogs
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="blogsDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="blogsDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Grid</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Details</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>
+                            <div class="settings">
+                                <a href="#"
+                                    class="settings-trigger flex items-center gap-1 text-gray-600 hover:text-gray-800"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-gear"></i>
+                                </a>
+                                <div class="settings-dropdown">
+                                    <p class="settings-group-title">LANGUAGE</p>
+                                    <div class="options ml-3" style="display: flex; flex-direction: column;">
+                                        <a href="#" class="settings-option">English</a>
+                                        <a href="#" class="settings-option">Français</a>
+                                    </div>
+
+                                    <p class="settings-group-title">CURRENCY</p>
+                                    <div class="options ml-3" style="display: flex; flex-direction: column;">
+                                        <a href="#" class="settings-option">$ USD</a>
+                                        <a href="#" class="settings-option">₹ INR</a>
+                                        <a href="#" class="settings-option">€ EUR</a>
+                                        <a href="#" class="settings-option">£ GBP</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-container relative">
+                                <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                                <div class="cart-dropdown absolute top-full right-0 mt-2 w-64 bg-white">
+                                    <div class="p-4">
+                                        <p class="text-sm lato-regular mt-2" style="font-size: 16px; color: #222222;">
+                                            Your cart is currently empty.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+    </section>
+
+
+    <section id="current-page" style="background-color: #f8f8f8; height: 80px;">
+        <div class="container flex justify-between items-center">
+            <div class="row w-full flex justify-between items-center" style="padding: 25px 65px">
+                <div class="title lato-bold" style="font-size: 16px; color: #222222;">
+                    <h2>ABOUT-US</h2>
+                </div>
+                <div class="switch lato-bold" style="font-size: 14px; color: #555555;">
+                    <a href="./home.html">HOME</a>
+                    <span class="divider ml-2 mr-2">/</span>
+                    <a href="./about.html" class="active">ABOUT-US</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-card" style="height: 707px; padding: 0 70px;">
+        <div class="container">
+            <div class="row">
+                <div class="img flex justify-center items-center" style="margin-top: 70px;">
+                    <img src="./assets/img/about_us.2b75601d.jpg" alt="about us" height="385px" width="1375px"
+                        class="rounded rounded-lg">
+                </div>
+                <div class="content mt-12">
+                    <h2 class="text-2xl lato-bold mb-4 mt-8" style="font-size: 18px; color: #212529;">Sed ut
+                        perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</h2>
+                    <p class="text-sm text-gray-600 lato-regular"
+                        style="font-size: 14px; color: #777777; line-height: 1.8; letter-spacing: 1.1px;">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium, <br>
+
+                        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled
+                        and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot
+                        foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail
+                        in their duty through weakness of will, which is the same as saying through shrinking from toil
+                        and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our
+                        power of choice is untrammelled and when nothing prevents our being able to do what we like
+                        best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and
+                        owing to the claims of duty or the obligations of business it will frequently occur that
+                        pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in
+                        these matters to this principle of selection: he rejects pleasures to secure other greater
+                        pleasures, or else he endures pains to avoid worse pains.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="comment-box" style="height: 253px; background-color: #f7f7f7;">
+        <div class="container">
+            <div class="row">
+                <div class="comments relative flex flex-col md:flex-row items-center justify-between gap-12"
+                    style="padding: 50px 70px;">
+                    <div class="comment flex items-center justify-between gap-8">
+                        <div class="comment-left-section">
+                            <img src="./assets/img/avtar.jpg" alt="avtar" class="rounded-full" width="127px"
+                                height="127px" style="border: 1px solid #dddddd; padding: 3px;" />
+                            <p class="lato-bold mt-2" style="font-size: 16px; color: #ff4b3b; text-align: center;">Mark
+                                Jenco</p>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777; text-align: center;">
+                                designer</p>
+                        </div>
+                        <div class="comment-right-section lato-regular"
+                            style="font-size: 14px; color: #777777; line-height: 1.8; letter-spacing: 1.1px; max-width: 450px;">
+                            <p>
+                                you how all this mistaken idea of denouncing pleasure and praising
+                                pain was born and I will give you a complete account of the system, and expound the
+                                actual teachings.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comment-divider"
+                        style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 1px; height: 180px; background-color: #dedede; z-index: 10;">
+                    </div>
+
+                    <div class="comment flex items-center justify-between gap-8">
+                        <div class="comment-left-section">
+                            <img src="./assets/img/avtar (2).jpg" alt="avtar" class="rounded-full" width="127px"
+                                height="127px" style="border: 1px solid #dddddd; padding: 3px;" />
+                            <p class="lato-bold mt-2" style="font-size: 16px; color: #ff4b3b; text-align: center;">Mark
+                                Jenco</p>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777; text-align: center;">
+                                designer</p>
+                        </div>
+                        <div class="comment-right-section lato-regular"
+                            style="font-size: 14px; color: #777777; line-height: 1.8; letter-spacing: 1.1px; max-width: 450px;">
+                            <p>
+                                you how all this mistaken idea of denouncing pleasure and praising
+                                pain was born and I will give you a complete account of the system, and expound the
+                                actual teachings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" style="padding: 50px 70px;">
+        <div class="container">
+            <div class="row">
+                <div class="team-upside flex items-center justify-between border-b" style="border-color: #dddddd">
+                    <div class="team-title">
+                        <h2 class="text-2xl lato-bold mb-4 mt-8" style="font-size: 18px; color: #212529;">OUR TEAM</h2>
+                    </div>
+                    <div class="carousel-chevrons">
+                        <button type="button" class="carousel-chevron-left" data-carousel-prev>
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button type="button" class="carousel-chevron-right" data-carousel-next>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="team-carousel" class="relative w-full overflow-hidden" style="margin-top: 30px;">
+                    <div id="team-carousel-track" class="flex gap-6"
+                        style="height: 575px; will-change: transform; transition: transform 650ms ease;">
+                        <div class="team-card flex-shrink-0 flex flex-col items-center justify-center gap-4"
+                            style="height: 565px;">
+                            <img src="./assets/img/team (1).jpg" alt="Hileri Keol"
+                                style="width: 100%; height: 450px; object-fit: cover;" />
+                            <h3 class="lato-bold" style="font-size: 16px; color: #ff4b3b;">Hileri Keol</h3>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">CEO & Founder At Company
+                            </p>
+                        </div>
+                        <div class="team-card flex-shrink-0 flex flex-col items-center justify-center gap-4"
+                            style="height: 565px;">
+                            <img src="./assets/img/team (2).jpg" alt="Nolan Marks"
+                                style="width: 100%; height: 450px; object-fit: cover;" />
+                            <h3 class="lato-bold" style="font-size: 16px; color: #ff4b3b;">Nolan Marks</h3>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Creative Director</p>
+                        </div>
+                        <div class="team-card flex-shrink-0 flex flex-col items-center justify-center gap-4"
+                            style="height: 565px;">
+                            <img src="./assets/img/team (4).jpg" alt="Mason Reed"
+                                style="width: 100%; height: 450px; object-fit: cover;" />
+                            <h3 class="lato-bold" style="font-size: 16px; color: #ff4b3b;">Mason Reed</h3>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Product Strategist</p>
+                        </div>
+                        <div class="team-card flex-shrink-0 flex flex-col items-center justify-center gap-4"
+                            style="height: 565px;">
+                            <img src="./assets/img/team (5).jpg" alt="Lena Ortiz"
+                                style="width: 100%; height: 450px; object-fit: cover;" />
+                            <h3 class="lato-bold" style="font-size: 16px; color: #ff4b3b;">Lena Ortiz</h3>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">UX Lead</p>
+                        </div>
+                        <div class="team-card flex-shrink-0 flex flex-col items-center justify-center gap-4"
+                            style="height: 565px;">
+                            <img src="./assets/img/team (3).jpg" alt="Ava Hudson"
+                                style="width: 100%; height: 450px; object-fit: cover;" />
+                            <h3 class="lato-bold" style="font-size: 16px; color: #ff4b3b;">Ava Hudson</h3>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Head Of Marketing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services" style="height: 177px; padding: 50px 75px; margin-top: 50px; margin-bottom: 75px;">
+        <div class="container" style="height: 170px;">
+            <div class="row flex justify-center items-center" style="gap: 250px;">
+                <div class="shipping">
+                    <div class="context flex justify-center items-center gap-4">
+                        <i class="fa-regular fa-truck text-3xl" style="color: #ff4b3b; font-size: 45px;"></i>
+                        <div class="text">
+                            <a href="#">
+                                <h4 class="lato-bold title" style="font-size: 18px; color: #333333;">FREE SHIPPING</h4>
+                            </a>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Free Shipping World Wide
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="online">
+                    <div class="context flex justify-center items-center gap-4">
+                        <i class="fa-regular fa-clock text-3xl" style="color: #ff4b3b; font-size: 45px;"></i>
+                        <div class="text">
+                            <a href="#">
+                                <h4 class="lato-bold title" style="font-size: 18px; color: #333333;">24X7 SERVICE</h4>
+                            </a>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">Online Service for 24 Hours
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="festival">
+                    <div class="context flex justify-center items-center gap-4">
+                        <i class="fa-solid fa-bullhorn text-3xl" style="color: #ff4b3b; font-size: 45px;"></i>
+                        <div class="text">
+                            <a href="#">
+                                <h4 class="lato-bold title" style="font-size: 18px; color: #333333;">FESTIVAL OFFER</h4>
+                            </a>
+                            <p class="lato-regular" style="font-size: 14px; color: #777777;">New Online Special Festival
+                                Offer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class=" text-gray-700" style="height:490px; padding: 0 !important; background-color: #f9f9f9;">
+        <!-- Newsletter -->
+        <div class="container" style="padding: 35px 70px;">
+            <div class="row">
+
+
+                <div class="w-full border-b px-1 md:px-2" style="border-color: #dddddd;">
+                    <div class="flex flex-col md:flex-row items-center justify-between" style="margin-bottom: 35px;">
+
+                        <div>
+                            <h2 class="text-lg lato-bold" style="font-size: 18px; color: #222222;">KNOW IT ALL FIRST!
+                            </h2>
+                            <p class="text-sm text-gray-500 lato-regular" style="font-size: 14px; color: #777777;">
+                                Never Miss Anything From Multikart By Signing Up To Our Newsletter.
+                            </p>
+                        </div>
+
+                        <div class="flex w-full md:w-auto gap-3 ">
+                            <input type="email" placeholder="Enter your email"
+                                class="footer-email-input w-full md:w-80 px-4 py-2 outline-none"
+                                style="width: 342px; height: 52px;" />
+                            <button class="footer-subscribe-btn lato-bold px-6 py-2"
+                                style="width: 145px; height: 50px; background-color: #ff4b3b; font-size: 14px; color: #fff; letter-spacing: 1.2px;">
+                                <span class="footer-subscribe-label">SUBSCRIBE</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Main Footer -->
+                <div class="footer-main w-full md:px-2 py-12 mt-6">
+
+                    <div class="about footer-about">
+
+                        <!-- Logo + About -->
+                        <div class="logo-about">
+                            <h2 class="text-2xl font-bold flex items-center gap-2">
+                                <a href="#">
+                                    <img src="./assets/img/logo.png" alt="logo">
+                                </a>
+                            </h2>
+                            <a href="#" class="logo-about-link">
+                                <p class="mt-5 text-sm leading-6 mb-8 leto-regular hover:underline"
+                                    style="line-height: 2.5; font-size: 14px; color: #777777;">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam.
+                                </p>
+                            </a>
+
+                            <!-- Social icons -->
+                            <div class="flex gap-8 mt-8 text-lg">
+                                <i class="fab fa-facebook-f cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-google-plus-g cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-twitter cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-instagram cursor-pointer hover:text-red-500"></i>
+                                <i class="fas fa-rss cursor-pointer hover:text-red-500"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sections"
+                        style="display: flex; gap: 100px; justify-content: center; gap: 120px; margin-left: 40px; ">
+
+                        <!-- My Account -->
+                        <div class="footer-my-account">
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">MY ACCOUNT</h3>
+                            <ul class="space-y-2 text-sm leto-regular mt-8" style="font-size: 14px; color: #777777;">
+                                <li><a href="#" class="hover:text-red-500 mt-8">Womens</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Clothing</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Accessories</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Featured</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Why We Choose -->
+                        <div>
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">WHY WE CHOOSE</h3>
+                            <ul class="space-y-2 text-sm leto-regular mt-8" style="font-size: 14px; color: #777777;">
+                                <li><a href="#" class="hover:text-red-500 mt-8">Shipping & Return</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Secure Shopping</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Gallary</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Affiliates</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Contacts</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Store Info -->
+                        <div style="max-width: 270px;">
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">STORE INFORMATION</h3>
+                            <ul class="space-y-3 text-sm leto-regular mt-8 store-info"
+                                style="font-size: 14px; color: #777777; letter-spacing: 1.4px; line-height: 1.6;">
+                                <li class="flex items-start gap-4">
+                                    <a href="#">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Multikart Demo Store, Demo Store India
+                                        345-659
+                                    </a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="callto:123-456-7898">
+                                        <i class="fa-solid fa-phone"></i>
+                                        Call Us: 123-456-7898
+                                    </a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="mailto:support@Fiot.Com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        Email Us: Support@Fiot.Com</a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="faxto:123456">
+                                        <i class="fa-solid fa-fax"></i>
+                                        Fax: 123456</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <section id="copyrights">
+
+        <div class="py-4" style="margin:8px 55px;">
+            <div
+                class="w-full px-1 md:px-2 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+
+                <p>© 2023-24 themeforest powered by pixelstrap</p>
+
+                <div class="flex gap-3 mt-3 md:mt-0">
+                    <a href="#"> <img src="./assets/img/payment (1).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (2).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (3).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (4).png" class="h-6" /> </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <button id="scroll-to-top" type="button" aria-label="Scroll to top">
+        <i class="fa-solid fa-angles-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="./assets/script/script.js"></script>
+</body>
+
+</html>

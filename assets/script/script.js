@@ -469,6 +469,168 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    const teamCarouselElement = document.getElementById("team-carousel");
+    const teamCarouselTrack = document.getElementById("team-carousel-track");
+
+    if (teamCarouselElement && teamCarouselTrack) {
+        const teamPrevButton = document.querySelector("#team .carousel-chevron-left");
+        const teamNextButton = document.querySelector("#team .carousel-chevron-right");
+        const transitionMs = 650;
+        let isSliding = false;
+        let visibleCards = 4;
+        let cardWidth = 0;
+        let cardGap = 24;
+        let currentIndex = 0;
+
+        const getVisibleCards = function () {
+            if (window.innerWidth >= 1024) {
+                return 4;
+            }
+            if (window.innerWidth >= 640) {
+                return 2;
+            }
+            return 1;
+        };
+
+        const readGap = function () {
+            const computed = window.getComputedStyle(teamCarouselTrack);
+            const gapValue = parseFloat(computed.columnGap || computed.gap || "24");
+            return Number.isFinite(gapValue) ? gapValue : 24;
+        };
+
+        const removeClones = function () {
+            const clones = teamCarouselTrack.querySelectorAll("[data-team-clone='true']");
+            clones.forEach(function (clone) {
+                clone.remove();
+            });
+        };
+
+        const buildInfiniteTrack = function () {
+            removeClones();
+
+            const originalCards = Array.from(teamCarouselTrack.querySelectorAll(":scope > .team-card"));
+            if (originalCards.length < 2) {
+                return;
+            }
+
+            const headClones = originalCards.slice(-visibleCards).map(function (card) {
+                const clone = card.cloneNode(true);
+                clone.setAttribute("data-team-clone", "true");
+                return clone;
+            });
+
+            const tailClones = originalCards.slice(0, visibleCards).map(function (card) {
+                const clone = card.cloneNode(true);
+                clone.setAttribute("data-team-clone", "true");
+                return clone;
+            });
+
+            headClones.forEach(function (clone) {
+                teamCarouselTrack.insertBefore(clone, teamCarouselTrack.firstChild);
+            });
+
+            tailClones.forEach(function (clone) {
+                teamCarouselTrack.appendChild(clone);
+            });
+
+            currentIndex = visibleCards;
+        };
+
+        const updateCardWidths = function () {
+            visibleCards = getVisibleCards();
+            cardGap = readGap();
+            cardWidth = (teamCarouselElement.clientWidth - cardGap * (visibleCards - 1)) / visibleCards;
+
+            const allCards = teamCarouselTrack.querySelectorAll(":scope > .team-card");
+            allCards.forEach(function (card) {
+                card.style.width = cardWidth + "px";
+                card.style.minWidth = cardWidth + "px";
+            });
+        };
+
+        const setTrackPosition = function (index, withTransition) {
+            if (withTransition) {
+                teamCarouselTrack.style.transition = "transform " + transitionMs + "ms ease";
+            } else {
+                teamCarouselTrack.style.transition = "none";
+            }
+
+            teamCarouselTrack.style.transform = "translateX(-" + index * (cardWidth + cardGap) + "px)";
+        };
+
+        const normalizeAfterSlide = function () {
+            const originalCount = teamCarouselTrack.querySelectorAll(":scope > .team-card:not([data-team-clone='true'])").length;
+
+            if (currentIndex >= originalCount + visibleCards) {
+                currentIndex = visibleCards;
+                setTrackPosition(currentIndex, false);
+            } else if (currentIndex < visibleCards) {
+                currentIndex = originalCount + visibleCards - 1;
+                setTrackPosition(currentIndex, false);
+            }
+        };
+
+        const moveNext = function () {
+            if (isSliding) {
+                return;
+            }
+
+            isSliding = true;
+            currentIndex += 1;
+            setTrackPosition(currentIndex, true);
+
+            window.setTimeout(function () {
+                normalizeAfterSlide();
+                isSliding = false;
+            }, transitionMs + 30);
+        };
+
+        const movePrev = function () {
+            if (isSliding) {
+                return;
+            }
+
+            isSliding = true;
+            currentIndex -= 1;
+            setTrackPosition(currentIndex, true);
+
+            window.setTimeout(function () {
+                normalizeAfterSlide();
+                isSliding = false;
+            }, transitionMs + 30);
+        };
+
+        const initializeTeamCarousel = function () {
+            visibleCards = getVisibleCards();
+            buildInfiniteTrack();
+            updateCardWidths();
+            setTrackPosition(currentIndex, false);
+        };
+
+        initializeTeamCarousel();
+
+        if (teamNextButton) {
+            teamNextButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                moveNext();
+            });
+        }
+
+        if (teamPrevButton) {
+            teamPrevButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                movePrev();
+            });
+        }
+
+        window.addEventListener("resize", function () {
+            if (isSliding) {
+                return;
+            }
+            initializeTeamCarousel();
+        });
+    }
+
     const ourCollectionTrack = document.getElementById("carousel-track");
 
     if (ourCollectionTrack && ourCollectionTrack.children.length > 3) {
