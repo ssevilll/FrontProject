@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const desktopMedia = window.matchMedia("(min-width: 768px)");
+    const desktopMedia = window.matchMedia("(min-width: 1280px)");
     const toggles = document.querySelectorAll("#navbar [data-dropdown-toggle], #navbar [data-dropend-toggle]");
     const navbarNav = document.querySelector("#navbar nav");
     const stickyStartOffset = 300;
@@ -98,9 +98,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const enforceDropendPosition = function () {
             if (!isCustomDropend) return;
 
-            menu.style.position = "absolute";
-            menu.style.top = "0";
-            menu.style.left = "100%";   // push to the right
+            if (desktopMedia.matches) {
+                menu.style.position = "absolute";
+                menu.style.top = "0";
+                menu.style.left = "100%";
+                menu.style.marginLeft = "0";
+                menu.style.transform = "none";
+                return;
+            }
+
+            // On sm/md/lg, nested menus should expand vertically below their trigger.
+            menu.style.position = "static";
+            menu.style.top = "auto";
+            menu.style.left = "auto";
             menu.style.marginLeft = "0";
             menu.style.transform = "none";
         };
@@ -629,6 +639,62 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             initializeTeamCarousel();
         });
+    }
+
+    const footerDropMedia = window.matchMedia("(max-width: 991px)");
+    const footerDropToggles = Array.from(document.querySelectorAll(".footer-drop-toggle[data-footer-target]"));
+
+    if (footerDropToggles.length) {
+        const syncFooterDropState = function () {
+            footerDropToggles.forEach(function (toggle) {
+                const targetId = toggle.getAttribute("data-footer-target");
+                const content = targetId ? document.getElementById(targetId) : null;
+
+                if (!content) {
+                    return;
+                }
+
+                if (footerDropMedia.matches) {
+                    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+                    content.classList.toggle("is-open", isOpen);
+                    toggle.classList.toggle("is-open", isOpen);
+                    return;
+                }
+
+                // On lg/xl keep all sections expanded.
+                toggle.setAttribute("aria-expanded", "true");
+                toggle.classList.remove("is-open");
+                content.classList.add("is-open");
+            });
+        };
+
+        footerDropToggles.forEach(function (toggle, index) {
+            const targetId = toggle.getAttribute("data-footer-target");
+            const content = targetId ? document.getElementById(targetId) : null;
+
+            if (!content) {
+                return;
+            }
+
+            if (footerDropMedia.matches) {
+                toggle.setAttribute("aria-expanded", index === 0 ? "true" : "false");
+            } else {
+                toggle.setAttribute("aria-expanded", "true");
+            }
+
+            toggle.addEventListener("click", function () {
+                if (!footerDropMedia.matches) {
+                    return;
+                }
+
+                const willOpen = toggle.getAttribute("aria-expanded") !== "true";
+                toggle.setAttribute("aria-expanded", String(willOpen));
+                syncFooterDropState();
+            });
+        });
+
+        syncFooterDropState();
+        footerDropMedia.addEventListener("change", syncFooterDropState);
     }
 
     const ourCollectionTrack = document.getElementById("carousel-track");
