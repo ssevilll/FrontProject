@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section id="header">
+        <section id="top-header" class="bg-gray-100 px-4 flex justify-between items-center" style="height: 50px;">
+            <div class="container mx-auto flex justify-between items-center px-6">
+
+                <div class="left-section flex justify-center items-center gap-5">
+
+                    <div class="message text-sm text-gray-600">
+                        <p style="color:#999999">Welcome to Our store Multikart!</p>
+                    </div>
+                    <div class="contact text-sm text-gray-600">
+                        <p style="color:#999999"><i class="fa-solid fa-phone" style="color:#999999"></i> Call Us: 123 -
+                            456
+                            - 7890</p>
+                    </div>
+                </div>
+                <div class="right-section flex justify-center items-center gap-4">
+
+                    <div class="wish-list">
+                        <a href="#" class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800">
+                            <i class="fa-solid fa-heart" style="color:#999999"></i>
+                            <p style="color:#999999">Wishlist</p>
+                        </a>
+                    </div>
+                    <div class="account">
+                        <a href="#" class="account-trigger flex items-center gap-1 text-sm hover:text-gray-800"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-user" style="color:#999999"></i>
+                            <p style="color:#999999">My Account</p>
+                        </a>
+                        <div class="account-dropdown">
+                            <a href="#" class="account-link lato-regular"
+                                style="font-size: 15px; color: #333333;">Login</a>
+                            <a href="#" class="account-link lato-regular"
+                                style="font-size: 15px; color: #333333;">Register</a>
+                            <a href="#" class="account-link lato-regular"
+                                style="font-size: 15px; color: #333333;">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="navbar" style="position: relative; z-index: 3000;">
+            <nav class="sticky top-0 left-0 w-full border-b border-gray-200 bg-white"
+                style="height: 115px; z-index: 3000;">
+                <div class="mx-auto flex h-full w-full flex-wrap items-center justify-between px-4 md:px-6 lg:px-8">
+                    <div class="flex items-center gap-4">
+                        <button data-drawer-target="sidebar-menu" data-drawer-toggle="sidebar-menu"
+                            aria-controls="sidebar-menu" class="text-gray-800">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                        <a href="#" class="m-0 p-0">
+                            <img src="./assets/img/logo.png" alt="Site logo" class="h-10 w-auto">
+                        </a>
+                    </div>
+
+                    <button data-collapse-toggle="navbar-multi-level-dropdown" type="button"
+                        class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm text-gray-500 hover:bg-gray-100 md:hidden"
+                        aria-controls="navbar-multi-level-dropdown" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                d="M5 7h14M5 12h14M5 17h14" />
+                        </svg>
+                    </button>
+
+                    <div class="right-side flex w-full items-center justify-between md:w-auto gap-5"
+                        style="color: #212121; font-size: 18px">
+
+
+                        <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level-dropdown">
+                            <ul
+                                class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:ms-12 md:flex-row md:space-x-8 md:border-0 md:bg-white">
+                                <li>
+                                    <button id="homeDropdownButton" data-dropdown-toggle="homeDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Home
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="homeDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-52 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="homeDropdownButton">
+                                            <li class="relative">
+                                                <button id="homeDropendOneButton" data-dropend-toggle="homeDropendOne"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Fashion Home <span class=" text-xs ml-2 px-1 py-1 lato-bold"
+                                                        style="color: #ff4b3b;">NEW</span>
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendOne"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendOneButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendTwoButton" data-dropend-toggle="homeDropendTwo"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Furniture Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendTwo"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendTwoButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                1</a></li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                2</a></li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendThreeButton"
+                                                    data-dropend-toggle="homeDropendThree" type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Minimal Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendThree"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendThreeButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Electronics
+                                                    Home</a>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendFiveButton" data-dropend-toggle="homeDropendFive"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Watch Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendFive"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendFiveButton">
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shoes Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bags Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Beauty Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Jewelry Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Flowers Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Kids Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pets Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Sports Home</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="shopDropdownButton" data-dropdown-toggle="shopDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Shop
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="shopDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="shopDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Grid</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop List</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Filter</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="productsDropdownButton" data-dropdown-toggle="productsDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Products
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="productsDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="productsDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Box</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Slider</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product
+                                                    Gallery</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="featuresDropdownButton" data-dropdown-toggle="featuresDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Features
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="featuresDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="featuresDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature One</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature Two</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="pagesDropdownButton" data-dropdown-toggle="pagesDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Pages
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="pagesDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="pagesDropdownButton">
+                                            <li><a href="./about.html" class="block px-4 py-2 hover:bg-gray-100">About
+                                                    Us</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="blogsDropdownButton" data-dropdown-toggle="blogsDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Blogs
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="blogsDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="blogsDropdownButton">
+                                            <li><a href="./blog-left.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blogs left sidebar</a>
+                                            </li>
+                                            <li><a href="./blog-right.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blogs right sidebar</a>
+                                            </li>
+                                            <li><a href="./blog-noside.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blogs no sidebar</a>
+                                            </li>
+                                            <li><a href="./blog-single.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blog Single</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>
+                            <div class="settings">
+                                <a href="#"
+                                    class="settings-trigger flex items-center gap-1 text-gray-600 hover:text-gray-800"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-gear"></i>
+                                </a>
+                                <div class="settings-dropdown">
+                                    <p class="settings-group-title">LANGUAGE</p>
+                                    <div class="options ml-3" style="display: flex; flex-direction: column;">
+                                        <a href="#" class="settings-option">English</a>
+                                        <a href="#" class="settings-option">Français</a>
+                                    </div>
+
+                                    <p class="settings-group-title">CURRENCY</p>
+                                    <div class="options ml-3" style="display: flex; flex-direction: column;">
+                                        <a href="#" class="settings-option">$ USD</a>
+                                        <a href="#" class="settings-option">₹ INR</a>
+                                        <a href="#" class="settings-option">€ EUR</a>
+                                        <a href="#" class="settings-option">£ GBP</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-container relative">
+                                <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                                <div class="cart-dropdown absolute top-full right-0 mt-2 w-64 bg-white">
+                                    <div class="p-4">
+                                        <p class="text-sm lato-regular mt-2" style="font-size: 16px; color: #222222;">
+                                            Your cart is currently empty.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+    </section>
+
+
+    <div id="sidebar-menu"
+        class="fixed top-0 left-0 z-20 h-screen -translate-x-full transition-transform bg-white border-r border-gray-200"
+        style="z-index: 10000; width: 300px;" tabindex="-1">
+
+        <div class="p-4 border-b border-gray-200 flex items-center justify-between gap-5">
+            <h5 class="text-base font-semibold text-gray-500 px-6">BACK</h5>
+            <button type="button" data-drawer-hide="sidebar-menu"
+                class="absolute top-2 right-1 text-gray-400 hover:bg-gray-200 rounded-lg p-1.5">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+        </div>
+
+        <ul class="space-y-2 p-4">
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Clothing
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul class="sidebar-mega-menu absolute left-full top-0 z-50 hidden bg-white p-2 flex justify-center group-hover:flex group-focus-within:flex"
+                    style="width: 815px !important; height: 435px; gap: 140px; padding-top: 20px;">
+                    <div class="left">
+                        <p class="font-semibold text-gray-700 mb-2">Women's Fashion</p>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Dresses</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Tops</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Skirts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jeans</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jackets</a></li>
+                        <p class="font-semibold text-gray-700 mb-2">Men's Fashion</p>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shirts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">T-Shirts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jeans</a></li>
+                    </div>
+                    <div class="middle">
+                        <p class="font-semibold text-gray-700 mb-2">Accessories</p>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Bags</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Sunglasses</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Hats</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Belts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jewelry</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Watches</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Scarves</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Footwear</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Sportswear</a></li>
+                    </div>
+                    <div class="right img" style="width: 230px; height: 390px;">
+                        <a href="#"><img src="./assets/img/fashion.5172b934.jpg" alt="fashion"
+                                class="w-full h-full"></a>
+                    </div>
+                </ul>
+            </li>
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Shop
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shop Grid</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shop List</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shop Filter</a></li>
+                </ul>
+            </li>
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Products
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Product Box</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Product Slider</a></li>
+                    <li class="relative group">
+                        <a href="#" class="flex items-center justify-between rounded px-3 py-2 hover:bg-gray-100">
+                            Product Gallery
+                            <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                        </a>
+                        <ul
+                            class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery One</a></li>
+                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Two</a></li>
+                            <li class="relative group">
+                                <a href="#"
+                                    class="flex items-center justify-between rounded px-3 py-2 hover:bg-gray-100">
+                                    Gallery Three
+                                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                                </a>
+                                <ul
+                                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three
+                                            One</a></li>
+                                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three
+                                            Two</a></li>
+                                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three
+                                            Three</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Four</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Features
+                </a>
+            </li>
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Pages
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">About Us</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">FAQ</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Contact</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Blogs
+                </a>
+            </li>
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Electronics
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Phones</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Laptops</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Accessories</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Shoes
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Bags
+                </a>
+            </li>
+        </ul>
+
+
+
+        <button id="sidebar-overlay" type="button" data-drawer-hide="sidebar-menu" class="sidebar-overlay"
+            aria-label="Close sidebar overlay"></button>
+    </div>
+
+    <section id="current-page" style="background-color: #f8f8f8; height: 80px;">
+        <div class="container flex justify-between items-center">
+            <div class="row w-full flex justify-between items-center" style="padding: 25px 65px">
+                <div class="title lato-bold" style="font-size: 16px; color: #222222;">
+                    <h2>BLOG RIGHT SIDEBAR</h2>
+                </div>
+                <div class="switch lato-bold" style="font-size: 14px; color: #555555;">
+                    <a href="./home.html">HOME</a>
+                    <span class="divider ml-2 mr-2">/</span>
+                    <a href="./blog-right.html" class="active">BLOG RIGHT SIDEBAR</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
+        type="button"
+        class="text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none inline-flex sm:hidden">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10" />
+        </svg>
+    </button>
+
+    <section id="blog-layout" class="flex flex-col sm:flex-row sm:items-start"
+        style="margin-top: 72px; column-gap: 25px; row-gap: 25px; padding-right: 85px;">
+
+
+        <section id="blogs" style="padding: 0 72px 50px 0; flex: 1;">
+            <div class="w-full">
+                <div class="row w-full">
+                    <div class="blog flex justify-between mb-8">
+                        <div class="blog-image">
+                            <a href="#"><img src="./assets/img/blogs (1).jpg" height="297px" width="502px"
+                                    alt="blog"></a>
+                        </div>
+                        <div class="blog-text"
+                            style="max-width: 500px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; justify-content: center;">
+                            <div class="blog-date lato-regular" style="font-size: 14px; color: #ff4b3b;">
+                                <p>25 JANUARY 2023</p>
+                            </div>
+                            <div class="blog-title lato-bold" style="font-size: 18px; color: #333;">
+                                <a href="#">
+                                    <h3>You How All This Mistaken Idea Of
+                                        Denouncing Pleasure And Praising Pain Was Born
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="blog-about lato-regular"
+                                style="display: flex; gap: 20px; font-size: 14px; color: #777777;">
+                                <div class="blog-author" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p>Posted by : Admin Admin</p>
+                                </div>
+                                <div class="blog-likes" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p><i class="fa-solid fa-heart mr-2"></i>5 Hits</p>
+                                </div>
+                                <div class="blog-comment">
+                                    <p><i class="fa-solid fa-comment mr-2"></i>10 Comment</p>
+                                </div>
+                            </div>
+                            <div class="blog-description lato-regular" style="font-size: 14px; color: #777777;">
+                                <p>
+                                    Consequences that are extremely painful. Nor again is there anyone who loves or
+                                    pursues
+                                    or desires to obtain pain of itself, because it is pain, but because occasionally
+                                    circumstances occur in which toil and pain can procure him some great pleasure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog flex justify-between mb-8">
+                        <div class="blog-image">
+                            <a href="#"><img src="./assets/img/blogs (2).jpg" height="297px" width="502px"
+                                    alt="blog"></a>
+                        </div>
+                        <div class="blog-text"
+                            style="max-width: 500px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; justify-content: center;">
+                            <div class="blog-date lato-regular" style="font-size: 14px; color: #ff4b3b;">
+                                <p>25 JANUARY 2023</p>
+                            </div>
+                            <div class="blog-title lato-bold" style="font-size: 18px; color: #333;">
+                                <a href="#">
+                                    <h3>You How All This Mistaken Idea Of
+                                        Denouncing Pleasure And Praising Pain Was Born
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="blog-about lato-regular"
+                                style="display: flex; gap: 20px; font-size: 14px; color: #777777;">
+                                <div class="blog-author" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p>Posted by : Admin Admin</p>
+                                </div>
+                                <div class="blog-likes" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p><i class="fa-solid fa-heart mr-2"></i>5 Hits</p>
+                                </div>
+                                <div class="blog-comment">
+                                    <p><i class="fa-solid fa-comment mr-2"></i>10 Comment</p>
+                                </div>
+                            </div>
+                            <div class="blog-description lato-regular" style="font-size: 14px; color: #777777;">
+                                <p>
+                                    Consequences that are extremely painful. Nor again is there anyone who loves or
+                                    pursues
+                                    or desires to obtain pain of itself, because it is pain, but because occasionally
+                                    circumstances occur in which toil and pain can procure him some great pleasure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog flex justify-between mb-8">
+                        <div class="blog-image">
+                            <a href="#"><img src="./assets/img/blogs (3).jpg" height="297px" width="502px"
+                                    alt="blog"></a>
+                        </div>
+                        <div class="blog-text"
+                            style="max-width: 500px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; justify-content: center;">
+                            <div class="blog-date lato-regular" style="font-size: 14px; color: #ff4b3b;">
+                                <p>25 JANUARY 2023</p>
+                            </div>
+                            <div class="blog-title lato-bold" style="font-size: 18px; color: #333;">
+                                <a href="#">
+                                    <h3>You How All This Mistaken Idea Of
+                                        Denouncing Pleasure And Praising Pain Was Born
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="blog-about lato-regular"
+                                style="display: flex; gap: 20px; font-size: 14px; color: #777777;">
+                                <div class="blog-author" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p>Posted by : Admin Admin</p>
+                                </div>
+                                <div class="blog-likes" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p><i class="fa-solid fa-heart mr-2"></i>5 Hits</p>
+                                </div>
+                                <div class="blog-comment">
+                                    <p><i class="fa-solid fa-comment mr-2"></i>10 Comment</p>
+                                </div>
+                            </div>
+                            <div class="blog-description lato-regular" style="font-size: 14px; color: #777777;">
+                                <p>
+                                    Consequences that are extremely painful. Nor again is there anyone who loves or
+                                    pursues
+                                    or desires to obtain pain of itself, because it is pain, but because occasionally
+                                    circumstances occur in which toil and pain can procure him some great pleasure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog flex justify-between mb-8">
+                        <div class="blog-image">
+                            <a href="#"><img src="./assets/img/blogs (4).jpg" height="297px" width="502px"
+                                    alt="blog"></a>
+                        </div>
+                        <div class="blog-text"
+                            style="max-width: 500px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; justify-content: center;">
+                            <div class="blog-date lato-regular" style="font-size: 14px; color: #ff4b3b;">
+                                <p>25 JANUARY 2023</p>
+                            </div>
+                            <div class="blog-title lato-bold" style="font-size: 18px; color: #333;">
+                                <a href="#">
+                                    <h3>You How All This Mistaken Idea Of
+                                        Denouncing Pleasure And Praising Pain Was Born
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="blog-about lato-regular"
+                                style="display: flex; gap: 20px; font-size: 14px; color: #777777;">
+                                <div class="blog-author" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p>Posted by : Admin Admin</p>
+                                </div>
+                                <div class="blog-likes" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p><i class="fa-solid fa-heart mr-2"></i>5 Hits</p>
+                                </div>
+                                <div class="blog-comment">
+                                    <p><i class="fa-solid fa-comment mr-2"></i>10 Comment</p>
+                                </div>
+                            </div>
+                            <div class="blog-description lato-regular" style="font-size: 14px; color: #777777;">
+                                <p>
+                                    Consequences that are extremely painful. Nor again is there anyone who loves or
+                                    pursues
+                                    or desires to obtain pain of itself, because it is pain, but because occasionally
+                                    circumstances occur in which toil and pain can procure him some great pleasure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog flex justify-between mb-8">
+                        <div class="blog-image">
+                            <a href="#"><img src="./assets/img/blogs (5).jpg" height="297px" width="502px"
+                                    alt="blog"></a>
+                        </div>
+                        <div class="blog-text"
+                            style="max-width: 500px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; justify-content: center;">
+                            <div class="blog-date lato-regular" style="font-size: 14px; color: #ff4b3b;">
+                                <p>25 JANUARY 2023</p>
+                            </div>
+                            <div class="blog-title lato-bold" style="font-size: 18px; color: #333;">
+                                <a href="#">
+                                    <h3>You How All This Mistaken Idea Of
+                                        Denouncing Pleasure And Praising Pain Was Born
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="blog-about lato-regular"
+                                style="display: flex; gap: 20px; font-size: 14px; color: #777777;">
+                                <div class="blog-author" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p>Posted by : Admin Admin</p>
+                                </div>
+                                <div class="blog-likes" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p><i class="fa-solid fa-heart mr-2"></i>5 Hits</p>
+                                </div>
+                                <div class="blog-comment">
+                                    <p><i class="fa-solid fa-comment mr-2"></i>10 Comment</p>
+                                </div>
+                            </div>
+                            <div class="blog-description lato-regular" style="font-size: 14px; color: #777777;">
+                                <p>
+                                    Consequences that are extremely painful. Nor again is there anyone who loves or
+                                    pursues
+                                    or desires to obtain pain of itself, because it is pain, but because occasionally
+                                    circumstances occur in which toil and pain can procure him some great pleasure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog flex justify-between mb-8">
+                        <div class="blog-image">
+                            <a href="#"><img src="./assets/img/blogs (6).jpg" height="297px" width="502px"
+                                    alt="blog"></a>
+                        </div>
+                        <div class="blog-text"
+                            style="max-width: 500px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; justify-content: center;">
+                            <div class="blog-date lato-regular" style="font-size: 14px; color: #ff4b3b;">
+                                <p>25 JANUARY 2023</p>
+                            </div>
+                            <div class="blog-title lato-bold" style="font-size: 18px; color: #333;">
+                                <a href="#">
+                                    <h3>You How All This Mistaken Idea Of
+                                        Denouncing Pleasure And Praising Pain Was Born
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="blog-about lato-regular"
+                                style="display: flex; gap: 20px; font-size: 14px; color: #777777;">
+                                <div class="blog-author" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p>Posted by : Admin Admin</p>
+                                </div>
+                                <div class="blog-likes" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                                    <p><i class="fa-solid fa-heart mr-2"></i>5 Hits</p>
+                                </div>
+                                <div class="blog-comment">
+                                    <p><i class="fa-solid fa-comment mr-2"></i>10 Comment</p>
+                                </div>
+                            </div>
+                            <div class="blog-description lato-regular" style="font-size: 14px; color: #777777;">
+                                <p>
+                                    Consequences that are extremely painful. Nor again is there anyone who loves or
+                                    pursues
+                                    or desires to obtain pain of itself, because it is pain, but because occasionally
+                                    circumstances occur in which toil and pain can procure him some great pleasure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside id="default-sidebar"
+            class="left-0 top-[70px] z-40 w-64 transition-transform -translate-x-full sm:translate-x-0"
+            style="width: 325px; flex-shrink: 0;" aria-label="Sidebar">
+            <div class="px-0 py-0 bg-[#f8f8f8]"
+                style="margin-left: 0; display: flex; flex-direction: column; gap: 34px;">
+
+                <!-- RECENT BLOG -->
+                <div class="mb-0 border border-gray-200 p-5 bg-white"
+                    style="width: 325px; margin-top: 0; color: #333333;">
+                    <h3 class="text-[18px] lato-bold mb-6 tracking-wide">
+                        RECENT BLOG
+                    </h3>
+
+                    <!-- item -->
+                    <div class="flex gap-4 mb-6">
+                        <img src="./assets/img/blogs (1).jpg"
+                            style="height: 65px !important; width: 100px !important; object-fit: cover;" />
+                        <div>
+                            <p class="text-[14px] lato-bold" style="color: #333333;">25 January 2018</p>
+                            <span class="text-[15px] lato-regular" style="color: #555555;">0 hits</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mb-6">
+                        <img src="./assets/img/blogs (2).jpg"
+                            style="height: 65px !important; width: 100px !important; object-fit: cover;" />
+                        <div>
+                            <p class="text-[14px] lato-bold" style="color: #333333;">26 January 2018</p>
+                            <span class="text-[15px] lato-regular" style="color: #555555;">0 hits</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mb-6">
+                        <img src="./assets/img/blogs (3).jpg"
+                            style="height: 65px !important; width: 100px !important; object-fit: cover;" />
+                        <div>
+                            <p class="text-[14px] lato-bold" style="color: #333333;">29 January 2018</p>
+                            <span class="text-[15px] lato-regular" style="color: #555555;">0 hits</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mb-6">
+                        <img src="./assets/img/blogs (4).jpg"
+                            style="height: 65px !important; width: 100px !important; object-fit: cover;" />
+                        <div>
+                            <p class="text-[14px] lato-bold" style="color: #333333;">29 January 2018</p>
+                            <span class="text-[15px] lato-regular" style="color: #555555;">0 hits</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mb-6">
+                        <img src="./assets/img/blogs (5).jpg"
+                            style="height: 65px !important; width: 100px !important; object-fit: cover;" />
+                        <div>
+                            <p class="text-[14px] lato-bold" style="color: #333333;">29 January 2018</p>
+                            <span class="text-[15px] lato-regular" style="color: #555555;">0 hits</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mb-6">
+                        <img src="./assets/img/blogs (6).jpg"
+                            style="height: 65px !important; width: 100px !important; object-fit: cover;" />
+                        <div>
+                            <p class="text-[14px] lato-bold" style="color: #333333;">29 January 2018</p>
+                            <span class="text-[15px] lato-regular" style="color: #555555;">0 hits</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- POPULAR BLOG -->
+                <div class="border border-gray-200 p-5 bg-white" style="width: 325px; color: #333333;">
+                    <h3 class="text-[18px] lato-bold mb-6 tracking-wide">
+                        POPULAR BLOG
+                    </h3>
+
+                    <!-- item -->
+                    <div class="mb-8">
+                        <div class="flex gap-4">
+                            <!-- date box -->
+                            <div class="flex flex-col justify-center items-center lato-regular text-[14px]"
+                                style="background-color: #ff4c3b; width: 70px; height: 70px; min-width: 60px; color: #ffffff;">
+                                <span>03</span>
+                                <span>MAY</span>
+                            </div>
+
+                            <!-- content -->
+                            <div>
+                                <p class="lato-bold text-[14px] mb-1" style="color: #333333;">
+                                    Injected humour the like
+                                </p>
+                                <span class="text-[14px] lato-regular" style="color: #555555;">0 hits</span>
+                            </div>
+                        </div>
+
+                        <p class="lato-regular text-[14px] leading-relaxed mt-3"
+                            style="line-height: 1.5; color: #555555;">
+                            it look like readable English. Many desktop publishing text.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex gap-4">
+                            <!-- date box -->
+                            <div class="flex flex-col justify-center items-center lato-regular text-[14px]"
+                                style="background-color: #ff4c3b; width: 70px; height: 70px; min-width: 60px; color: #ffffff;">
+                                <span>03</span>
+                                <span>MAY</span>
+                            </div>
+
+                            <!-- content -->
+                            <div>
+                                <p class="lato-bold text-[14px] mb-1" style="color: #333333;">
+                                    Injected humour the like
+                                </p>
+                                <span class="text-[14px] lato-regular" style="color: #555555;">0 hits</span>
+                            </div>
+                        </div>
+
+                        <p class="lato-regular text-[14px] leading-relaxed mt-3"
+                            style="line-height: 1.5; color: #555555;">
+                            it look like readable English. Many desktop publishing text.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex gap-4">
+                            <div class="flex flex-col justify-center items-center lato-regular text-[14px]"
+                                style="background-color: #ff4c3b; width: 70px; height: 70px; min-width: 60px; color: #ffffff;">
+                                <span>03</span>
+                                <span>MAY</span>
+                            </div>
+
+                            <div>
+                                <p class="lato-bold text-[14px] mb-1" style="color: #333333;">
+                                    Injected humour the like
+                                </p>
+                                <span class="text-[14px] lato-regular" style="color: #555555;">0 hits</span>
+                            </div>
+                        </div>
+
+                        <p class="lato-regular text-[14px] leading-relaxed mt-3"
+                            style="line-height: 1.5; color: #555555;">
+                            it look like readable English. Many desktop publishing text.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex gap-4">
+                            <div class="flex flex-col justify-center items-center lato-regular text-[14px]"
+                                style="background-color: #ff4c3b; width: 70px; height: 70px; min-width: 60px; color: #ffffff;">
+                                <span>03</span>
+                                <span>MAY</span>
+                            </div>
+
+                            <div>
+                                <p class="lato-bold text-[14px] mb-1" style="color: #333333;">
+                                    Injected humour the like
+                                </p>
+                                <span class="text-[14px] lato-regular" style="color: #555555;">0 hits</span>
+                            </div>
+                        </div>
+
+                        <p class="lato-regular text-[14px] leading-relaxed mt-3"
+                            style="line-height: 1.5; color: #555555;">
+                            it look like readable English. Many desktop publishing text.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </aside>
+
+
+
+
+    </section>
+
+
+
+
+
+    <footer class=" text-gray-700" style="height:490px; padding: 0 !important; background-color: #f9f9f9;">
+        <!-- Newsletter -->
+        <div class="container" style="padding: 35px 70px;">
+            <div class="row">
+
+
+                <div class="w-full border-b px-1 md:px-2" style="border-color: #dddddd;">
+                    <div class="flex flex-col md:flex-row items-center justify-between" style="margin-bottom: 35px;">
+
+                        <div>
+                            <h2 class="text-lg lato-bold" style="font-size: 18px; color: #222222;">KNOW IT ALL FIRST!
+                            </h2>
+                            <p class="text-sm text-gray-500 lato-regular" style="font-size: 14px; color: #777777;">
+                                Never Miss Anything From Multikart By Signing Up To Our Newsletter.
+                            </p>
+                        </div>
+
+                        <div class="flex w-full md:w-auto gap-3 ">
+                            <input type="email" placeholder="Enter your email"
+                                class="footer-email-input w-full md:w-80 px-4 py-2 outline-none"
+                                style="width: 342px; height: 52px;" />
+                            <button class="footer-subscribe-btn lato-bold px-6 py-2"
+                                style="width: 145px; height: 50px; background-color: #ff4b3b; font-size: 14px; color: #fff; letter-spacing: 1.2px;">
+                                <span class="footer-subscribe-label">SUBSCRIBE</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Main Footer -->
+                <div class="footer-main w-full md:px-2 py-12 mt-6">
+
+                    <div class="about footer-about">
+
+                        <!-- Logo + About -->
+                        <div class="logo-about">
+                            <h2 class="text-2xl font-bold flex items-center gap-2">
+                                <a href="#">
+                                    <img src="./assets/img/logo.png" alt="logo">
+                                </a>
+                            </h2>
+                            <a href="#" class="logo-about-link">
+                                <p class="mt-5 text-sm leading-6 mb-8 leto-regular hover:underline"
+                                    style="line-height: 2.5; font-size: 14px; color: #777777;">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam.
+                                </p>
+                            </a>
+
+                            <!-- Social icons -->
+                            <div class="flex gap-8 mt-8 text-lg">
+                                <i class="fab fa-facebook-f cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-google-plus-g cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-twitter cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-instagram cursor-pointer hover:text-red-500"></i>
+                                <i class="fas fa-rss cursor-pointer hover:text-red-500"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sections"
+                        style="display: flex; gap: 100px; justify-content: center; gap: 120px; margin-left: 40px; ">
+
+                        <!-- My Account -->
+                        <div class="footer-my-account">
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">MY ACCOUNT</h3>
+                            <ul class="space-y-2 text-sm leto-regular mt-8" style="font-size: 14px; color: #777777;">
+                                <li><a href="#" class="hover:text-red-500 mt-8">Womens</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Clothing</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Accessories</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Featured</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Why We Choose -->
+                        <div>
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">WHY WE CHOOSE</h3>
+                            <ul class="space-y-2 text-sm leto-regular mt-8" style="font-size: 14px; color: #777777;">
+                                <li><a href="#" class="hover:text-red-500 mt-8">Shipping & Return</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Secure Shopping</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Gallary</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Affiliates</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Contacts</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Store Info -->
+                        <div style="max-width: 270px;">
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">STORE INFORMATION</h3>
+                            <ul class="space-y-3 text-sm leto-regular mt-8 store-info"
+                                style="font-size: 14px; color: #777777; letter-spacing: 1.4px; line-height: 1.6;">
+                                <li class="flex items-start gap-4">
+                                    <a href="#">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Multikart Demo Store, Demo Store India
+                                        345-659
+                                    </a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="callto:123-456-7898">
+                                        <i class="fa-solid fa-phone"></i>
+                                        Call Us: 123-456-7898
+                                    </a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="mailto:support@Fiot.Com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        Email Us: Support@Fiot.Com</a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="faxto:123456">
+                                        <i class="fa-solid fa-fax"></i>
+                                        Fax: 123456</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <section id="copyrights">
+
+        <div class="py-4" style="margin:8px 55px;">
+            <div
+                class="w-full px-1 md:px-2 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+
+                <p>© 2023-24 themeforest powered by pixelstrap</p>
+
+                <div class="flex gap-3 mt-3 md:mt-0">
+                    <a href="#"> <img src="./assets/img/payment (1).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (2).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (3).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (4).png" class="h-6" /> </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <button id="scroll-to-top" type="button" aria-label="Scroll to top">
+        <i class="fa-solid fa-angles-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="./assets/script/script.js"></script>
+</body>
+
+</html>
