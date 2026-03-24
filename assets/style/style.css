@@ -640,6 +640,34 @@ body.modal-open {
     transform: translate3d(0, 0, 0);
 }
 
+#default-sidebar {
+    position: fixed;
+    top: 165px;
+    left: 0;
+    height: calc(100vh - 165px);
+}
+
+@media (max-width: 639px) {
+    #default-sidebar {
+        position: fixed;
+    }
+}
+
+@media (min-width: 640px) {
+    #default-sidebar {
+        position: static;
+        top: auto;
+        height: auto;
+        max-height: none;
+    }
+
+    #default-sidebar > div {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
 #percentage-off .percentage-row {
     margin-top: 70px;
     gap: 25px;
