@@ -492,7 +492,6 @@ body.modal-open {
     border: 5px solid #c2dbfe;
 }
 
-/* Subscribe button */
 .newsletter-btn {
     position: relative;
     display: inline-flex;
@@ -1972,4 +1971,55 @@ footer .fas {
 footer .store-info a:hover{
     color: #999999 !important;
     cursor: text;
+}
+
+#user-comments input::placeholder,
+#user-comments textarea::placeholder {
+  color: #6b7280;   
+  opacity: 1;      
+}
+
+#user-comments button {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid transparent;
+    color: #ffffff;
+    transition: color 0.45s ease, border-color 0.45s ease;
+}
+
+#user-comments button .comment-post-label {
+    position: relative;
+    z-index: 1;
+}
+
+#user-comments button::before {
+    content: "";
+    position: absolute;
+    top: -35%;
+    left: -35%;
+    width: 170%;
+    height: 170%;
+    background: #ffffff;
+    transform-origin: top right;
+    transform: scaleX(0) skewX(-28deg);
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+#user-comments button:hover,
+#user-comments button:focus-visible {
+    color: #000000;
+    border-color: #ff4b3b;
+    transition: transform 0.4s ease, color 0.45s ease, border-color 0.45s ease;
+}
+
+#user-comments button:hover .comment-post-label,
+#user-comments button:focus-visible .comment-post-label {
+    color: #000000;
+}
+
+#user-comments button:hover::before,
+#user-comments button:focus-visible::before {
+    transform: scaleX(1) skewX(-28deg);
 }

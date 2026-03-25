@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <section id="header">
+        <section id="top-header" class="bg-gray-100 px-4 flex justify-between items-center" style="height: 50px;">
+            <div class="container mx-auto flex justify-between items-center px-6">
+
+                <div class="left-section flex justify-center items-center gap-5">
+
+                    <div class="message text-sm text-gray-600">
+                        <p style="color:#999999">Welcome to Our store Multikart!</p>
+                    </div>
+                    <div class="contact text-sm text-gray-600">
+                        <p style="color:#999999"><i class="fa-solid fa-phone" style="color:#999999"></i> Call Us: 123 -
+                            456
+                            - 7890</p>
+                    </div>
+                </div>
+                <div class="right-section flex justify-center items-center gap-4">
+
+                    <div class="wish-list">
+                        <a href="#" class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800">
+                            <i class="fa-solid fa-heart" style="color:#999999"></i>
+                            <p style="color:#999999">Wishlist</p>
+                        </a>
+                    </div>
+                    <div class="account">
+                        <a href="#" class="account-trigger flex items-center gap-1 text-sm hover:text-gray-800"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-user" style="color:#999999"></i>
+                            <p style="color:#999999">My Account</p>
+                        </a>
+                        <div class="account-dropdown">
+                            <a href="#" class="account-link lato-regular"
+                                style="font-size: 15px; color: #333333;">Login</a>
+                            <a href="#" class="account-link lato-regular"
+                                style="font-size: 15px; color: #333333;">Register</a>
+                            <a href="#" class="account-link lato-regular"
+                                style="font-size: 15px; color: #333333;">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="navbar" style="position: relative; z-index: 3000;">
+            <nav class="sticky top-0 left-0 w-full border-b border-gray-200 bg-white"
+                style="height: 115px; z-index: 3000;">
+                <div class="mx-auto flex h-full w-full flex-wrap items-center justify-between px-4 md:px-6 lg:px-8">
+                    <div class="flex items-center gap-4">
+                        <button data-drawer-target="sidebar-menu" data-drawer-toggle="sidebar-menu"
+                            aria-controls="sidebar-menu" class="text-gray-800">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                        <a href="#" class="m-0 p-0">
+                            <img src="./assets/img/logo.png" alt="Site logo" class="h-10 w-auto">
+                        </a>
+                    </div>
+
+                    <button data-collapse-toggle="navbar-multi-level-dropdown" type="button"
+                        class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm text-gray-500 hover:bg-gray-100 md:hidden"
+                        aria-controls="navbar-multi-level-dropdown" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                d="M5 7h14M5 12h14M5 17h14" />
+                        </svg>
+                    </button>
+
+                    <div class="right-side flex w-full items-center justify-between md:w-auto gap-5"
+                        style="color: #212121; font-size: 18px">
+
+
+                        <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level-dropdown">
+                            <ul
+                                class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:ms-12 md:flex-row md:space-x-8 md:border-0 md:bg-white">
+                                <li>
+                                    <button id="homeDropdownButton" data-dropdown-toggle="homeDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Home
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="homeDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-52 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="homeDropdownButton">
+                                            <li class="relative">
+                                                <button id="homeDropendOneButton" data-dropend-toggle="homeDropendOne"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Fashion Home <span class=" text-xs ml-2 px-1 py-1 lato-bold"
+                                                        style="color: #ff4b3b;">NEW</span>
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendOne"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendOneButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Fashion
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendTwoButton" data-dropend-toggle="homeDropendTwo"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Furniture Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendTwo"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendTwoButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                1</a></li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                2</a></li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Furniture
+                                                                3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendThreeButton"
+                                                    data-dropend-toggle="homeDropendThree" type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Minimal Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendThree"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendThreeButton">
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#"
+                                                                class="block px-4 py-2 hover:bg-gray-100">Minimal
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Electronics
+                                                    Home</a>
+                                            </li>
+                                            <li class="relative">
+                                                <button id="homeDropendFiveButton" data-dropend-toggle="homeDropendFive"
+                                                    type="button"
+                                                    class="flex w-full items-center px-4 py-2 hover:bg-gray-100">
+                                                    Watch Home
+                                                    <svg class="ms-auto h-4 w-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                                <div id="homeDropendFive"
+                                                    class="nav-dropdown-layer absolute left-full top-0 ml-1 hidden w-44 bg-white">
+                                                    <ul class="py-2 text-sm text-gray-700"
+                                                        aria-labelledby="homeDropendFiveButton">
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                1</a>
+                                                        </li>
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                2</a>
+                                                        </li>
+                                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Watch
+                                                                3</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shoes Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bags Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Beauty Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Jewelry Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Flowers Home</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Kids Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pets Home</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Sports Home</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="shopDropdownButton" data-dropdown-toggle="shopDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Shop
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="shopDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="shopDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Grid</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop List</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Shop Filter</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="productsDropdownButton" data-dropdown-toggle="productsDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Products
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="productsDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="productsDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Box</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product Slider</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Product
+                                                    Gallery</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="featuresDropdownButton" data-dropdown-toggle="featuresDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Features
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="featuresDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="featuresDropdownButton">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature One</a>
+                                            </li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feature Two</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="pagesDropdownButton" data-dropdown-toggle="pagesDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Pages
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="pagesDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="pagesDropdownButton">
+                                            <li><a href="./about.html" class="block px-4 py-2 hover:bg-gray-100">About
+                                                    Us</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button id="blogsDropdownButton" data-dropdown-toggle="blogsDropdown"
+                                        class="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:p-0 md:hover:bg-transparent">
+                                        Blogs
+                                        <svg class="ms-1.5 h-4 w-4" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 9-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div id="blogsDropdown"
+                                        class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="blogsDropdownButton">
+                                            <li><a href="./blog-left.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blogs left sidebar</a>
+                                            </li>
+                                            <li><a href="./blog-right.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blogs right sidebar</a>
+                                            </li>
+                                            <li><a href="./blog-noside.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blogs no sidebar</a>
+                                            </li>
+                                            <li><a href="./blog-single.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blog Single</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>
+                            <div class="settings">
+                                <a href="#"
+                                    class="settings-trigger flex items-center gap-1 text-gray-600 hover:text-gray-800"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-gear"></i>
+                                </a>
+                                <div class="settings-dropdown">
+                                    <p class="settings-group-title">LANGUAGE</p>
+                                    <div class="options ml-3" style="display: flex; flex-direction: column;">
+                                        <a href="#" class="settings-option">English</a>
+                                        <a href="#" class="settings-option">Français</a>
+                                    </div>
+
+                                    <p class="settings-group-title">CURRENCY</p>
+                                    <div class="options ml-3" style="display: flex; flex-direction: column;">
+                                        <a href="#" class="settings-option">$ USD</a>
+                                        <a href="#" class="settings-option">₹ INR</a>
+                                        <a href="#" class="settings-option">€ EUR</a>
+                                        <a href="#" class="settings-option">£ GBP</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-container relative">
+                                <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-gray-800">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                                <div class="cart-dropdown absolute top-full right-0 mt-2 w-64 bg-white">
+                                    <div class="p-4">
+                                        <p class="text-sm lato-regular mt-2" style="font-size: 16px; color: #222222;">
+                                            Your cart is currently empty.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+    </section>
+
+
+    <div id="sidebar-menu"
+        class="fixed top-0 left-0 z-20 h-screen -translate-x-full transition-transform bg-white border-r border-gray-200"
+        style="z-index: 10000; width: 300px;" tabindex="-1">
+
+        <div class="p-4 border-b border-gray-200 flex items-center justify-between gap-5">
+            <h5 class="text-base font-semibold text-gray-500 px-6">BACK</h5>
+            <button type="button" data-drawer-hide="sidebar-menu"
+                class="absolute top-2 right-1 text-gray-400 hover:bg-gray-200 rounded-lg p-1.5">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+        </div>
+
+        <ul class="space-y-2 p-4">
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Clothing
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul class="sidebar-mega-menu absolute left-full top-0 z-50 hidden bg-white p-2 flex justify-center group-hover:flex group-focus-within:flex"
+                    style="width: 815px !important; height: 435px; gap: 140px; padding-top: 20px;">
+                    <div class="left">
+                        <p class="font-semibold text-gray-700 mb-2">Women's Fashion</p>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Dresses</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Tops</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Skirts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jeans</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jackets</a></li>
+                        <p class="font-semibold text-gray-700 mb-2">Men's Fashion</p>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shirts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">T-Shirts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jeans</a></li>
+                    </div>
+                    <div class="middle">
+                        <p class="font-semibold text-gray-700 mb-2">Accessories</p>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Bags</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Sunglasses</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Hats</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Belts</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Jewelry</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Watches</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Scarves</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Footwear</a></li>
+                        <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Sportswear</a></li>
+                    </div>
+                    <div class="right img" style="width: 230px; height: 390px;">
+                        <a href="#"><img src="./assets/img/fashion.5172b934.jpg" alt="fashion"
+                                class="w-full h-full"></a>
+                    </div>
+                </ul>
+            </li>
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Shop
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shop Grid</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shop List</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Shop Filter</a></li>
+                </ul>
+            </li>
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Products
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Product Box</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Product Slider</a></li>
+                    <li class="relative group">
+                        <a href="#" class="flex items-center justify-between rounded px-3 py-2 hover:bg-gray-100">
+                            Product Gallery
+                            <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                        </a>
+                        <ul
+                            class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery One</a></li>
+                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Two</a></li>
+                            <li class="relative group">
+                                <a href="#"
+                                    class="flex items-center justify-between rounded px-3 py-2 hover:bg-gray-100">
+                                    Gallery Three
+                                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                                </a>
+                                <ul
+                                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three
+                                            One</a></li>
+                                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three
+                                            Two</a></li>
+                                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Three
+                                            Three</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Gallery Four</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Features
+                </a>
+            </li>
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Pages
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">About Us</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">FAQ</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Contact</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Blogs
+                </a>
+            </li>
+            <li class="relative group">
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Electronics
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                </a>
+                <ul
+                    class="absolute left-full top-0 z-50 hidden min-w-44 bg-white p-2 group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Phones</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Laptops</a></li>
+                    <li><a href="#" class="block rounded px-3 py-2 hover:bg-gray-100">Accessories</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Shoes
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center justify-between rounded p-2 hover:bg-gray-100">
+                    Bags
+                </a>
+            </li>
+        </ul>
+
+
+
+        <button id="sidebar-overlay" type="button" data-drawer-hide="sidebar-menu" class="sidebar-overlay"
+            aria-label="Close sidebar overlay"></button>
+    </div>
+
+    <section id="current-page" style="background-color: #f8f8f8; height: 80px;">
+        <div class="container flex justify-between items-center">
+            <div class="row w-full flex justify-between items-center" style="padding: 25px 65px">
+                <div class="title lato-bold" style="font-size: 16px; color: #222222;">
+                    <h2>BLOG</h2>
+                </div>
+                <div class="switch lato-bold" style="font-size: 14px; color: #555555;">
+                    <a href="./home.html">HOME</a>
+                    <span class="divider ml-2 mr-2">/</span>
+                    <a href="./blog-noside.html" class="active">BLOG</a>
+                    <span class="divider ml-2 mr-2">/</span>
+                    <a href="./blog-single.html">BLOG DETAIL</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="main-post">
+        <div class="container mb-8" style="padding: 0 74px; padding-top: 70px;">
+            <div class="row">
+                <div class="img">
+                    <img src="./assets/img/about_us.2b75601d.jpg" alt="about-blog">
+                </div>
+                <div class="main-post-title mt-5 lato-bold" style="font-size: 24px; color: #222222;">
+                    <h3>Also the leap into electronic typesetting, remaining essentially unchanged.</h3>
+                </div>
+                <div class="main-post-about mt-5"
+                    style="display: flex; gap: 20px; font-size: 14px; color: #777777; border-bottom: 1px solid #ddd; padding-bottom: 20px;">
+                    <div class="main-post-date" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                        <p>20 March 2024</p>
+                    </div>
+                    <div class="main-post-author" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                        <p>Posted by : Admin Admin</p>
+                    </div>
+                    <div class="main-post-likes" style="border-right: 1px solid #ddd; padding-right: 20px;">
+                        <p><i class="fa-solid fa-heart mr-2"></i>5 Hits</p>
+                    </div>
+                    <div class="main-post-comment">
+                        <p><i class="fa-solid fa-comment mr-2"></i>10 Comment</p>
+                    </div>
+                </div>
+                <div class="main-post-context leto-regular" style="font-size: 14px; color: #777; line-height: 1.8;">
+                    <p class="mt-3 mb-3">Fusce scelerisque augue a viverra semper. Etiam nisi nibh, vestibulum quis
+                        augue id, imperdiet
+                        fringilla dolor. Nulla sed nisl vel nisi cursus finibus. Vivamus ut augue nec justo viverra
+                        laoreet. Nunc efficitur, arcu ac cursus gravida, lorem elit commodo urna, id viverra libero
+                        tellus non ipsum. Fusce molestie ultrices nibh feugiat pretium. Donec pulvinar arcu metus, et
+                        dapibus odio condimentum id. Quisque malesuada mauris sit amet dui feugiat, ut pretium mauris
+                        luctus. Ut aliquam, tellus nec molestie condimentum, tellus arcu dignissim quam, a gravida nunc
+                        nulla vel magna. Sed pulvinar tortor et euismod blandit. Proin accumsan orci ac nunc fermentum
+                        vehicula.</p>
+
+                    <p class="mt-3 mb-3">Cras quis neque urna. Pellentesque mollis, dui nec elementum elementum, ipsum
+                        quam suscipit
+                        ligula, sit amet lobortis dolor sem sed neque. Vivamus consequat est non sodales efficitur.
+                        Aliquam sodales eleifend sodales. Aliquam auctor ipsum quis nisl facilisis, at convallis mauris
+                        iaculis. Duis eleifend, magna ac convallis blandit, dui dui auctor leo, sed tincidunt nisi
+                        mauris ut nulla. Praesent porttitor dui ac turpis commodo porttitor. Integer ligula nisi,
+                        bibendum non sem at, porta condimentum dui.</p>
+
+                    <p class="mt-3 mb-3">Proin id eleifend diam, euismod dictum nibh. Ut ullamcorper in purus at tempor.
+                        Nullam mattis
+                        risus nec velit semper lobortis. Donec accumsan ligula fermentum, ultricies massa eget, cursus
+                        leo. Suspendisse placerat elit et lacus aliquam, ut elementum leo aliquet. Integer ornare, ipsum
+                        eu lacinia viverra, lectus ipsum scelerisque nisl, nec iaculis leo elit id arcu. Aliquam id ante
+                        elit. Donec commodo purus eget lacus pharetra, et egestas metus blandit. Quisque pellentesque
+                        porta urna, sed dictum enim viverra a.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="little-posts">
+        <div class="container" style="padding: 0 74px; margin-bottom: 20px;">
+            <div class="row flex flex-col lg:flex-row gap-6 items-start" style="border-bottom: 1px solid #777; padding-bottom: 25px;">
+                <div class="little-post w-full lg:w-1/2">
+                    <div class="img">
+                        <img src="./assets/img/blogs (2).jpg" class="w-full h-auto" alt="blog-1">
+                    </div>
+                    <div class="little-post-context lato-bold">
+                        <ol
+                            style="display: block; list-style-type: decimal; margin-left: 20px; color: #212529; font-size: 15px; margin-top: 25px;">
+                            <li class="mt-4 mb-4">Donec ut metus sit amet elit consectetur facilisis id vel turpis.</li>
+                            <li class="mt-4 mb-4">Aenean in mi eu elit mollis tincidunt.</li>
+                            <li class="mt-4 mb-4">Etiam blandit metus vitae purus lacinia ultricies.</li>
+                            <li class="mt-4 mb-4">Nunc quis nulla sagittis, faucibus neque a, tempus metus.</li>
+                            <li class="mt-4 mb-4">In scelerisque libero ut mi ornare, a porttitor neque pulvinar.</li>
+                            <li class="mt-4 mb-4">Morbi molestie lacus blandit interdum sodales.</li>
+                            <li class="mt-4 mb-4">Curabitur eleifend velit molestie eleifend interdum.</li>
+                            <li class="mt-4 mb-4">Vestibulum fringilla tortor et lorem sagittis</li>
+                            <li class="mt-4 mb-4">In scelerisque libero ut mi ornare, a porttitor neque pulvinar.</li>
+                            <li class="mt-4 mb-4">Morbi molestie lacus blandit interdum sodales.</li>
+                            <li class="mt-4 mb-4">Curabitur eleifend velit molestie eleifend interdum.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="little-post w-full lg:w-1/2">
+                    <div class="img">
+                        <img src="./assets/img/blogs (3).jpg" class="w-full h-auto" alt="blog-1">
+                    </div>
+                    <div class="little-post-context lato-regular" style="max-width: 100%; color: #777; font-size: 14px; line-height:2; margin-top: 25px;">
+                        <p class="mt-3 mb-3">Nulla quam turpis, commodo et placerat eu, mollis ut odio. Donec
+                            pellentesque egestas
+                            consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                            Curae; Nunc at urna dolor. Mauris odio nisi, rhoncus ac justo eget, lacinia iaculis lectus.
+                            Pellentesque id dapibus justo. Nunc venenatis non odio sed luctus. Etiam sit amet elit
+                            massa.</p>
+
+                        <p class="mt-3 mb-3">Phasellus quis lorem eros. Aliquam non tincidunt nibh. Nulla quis interdum
+                            neque. Mauris
+                            volutpat neque eu nunc ornare ullamcorper. Sed neque velit, lobortis eget tellus in,
+                            pellentesque ornare nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                            posuere cubilia Curae; Maecenas rutrum nisi non nibh egestas lacinia. Cras ut tellus sit
+                            amet lacus consequat dictum nec id sapien. Ut pellentesque ac ex ut elementum. Morbi mollis
+                            volutpat neque eu volutpat.</p>
+
+                        <p class="mt-3 mb-3">Donec rhoncus massa quis nibh imperdiet dictum. Vestibulum id est sit amet
+                            felis fringilla
+                            bibendum at at leo. Proin molestie ac nisi eu laoreet. Integer faucibus enim nec ullamcorper
+                            tempor. Aenean nec felis dui. Integer tristique odio mi, in volutpat metus posuere eu.
+                            Aenean suscipit ipsum nunc, id volutpat lorem hendrerit ac. Sed id elit quam. In ac mauris
+                            arcu. Praesent eget lectus sit amet diam vestibulum varius. Suspendisse dignissim mattis
+                            leo, nec facilisis erat tempor quis. Vestibulum eu vestibulum ex. Maecenas luctus orci sed
+                            blandit fermentum. In vulputate eu metus a faucibus. Suspendisse feugiat condimentum congue.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="comments">
+        <div class="container">
+            <div class="row" style="padding: 0 74px;">
+                <div class="comment flex gap-4 items-start mt-10 mb-10 border-b border-gray-300 pb-10">
+                    <div class="left-section" style="display: flex; align-items: center; justify-content: center;">
+                        <div class="img">
+                            <img src="./assets/img/avtar.jpg" alt="avatar" class="rounded-full" width="80px"
+                                height="80px">
+                        </div>
+                    </div>
+                    <div class="right-section" style="max-width: 1300px;">
+                        <div class="up flex gap-3 items-start mb-2">
+                            <div class="name lato-bold">
+                                <p style="font-size: 14px; color: #444;">Mark Jecno</p>
+                            </div>
+                            <div class="date lato-regular">
+                                <p style="font-size: 13px; color: #777;">( 12 Jannuary 2023 at 1:30AM )</p>
+                            </div>
+                        </div>
+                        <div class="comment-context lato-regular" style="font-size: 14px; color: #777; line-height: 1.8;">
+                            <p>Donec rhoncus massa quis nibh imperdiet dictum. Vestibulum id est sit amet felis
+                                fringilla bibendum at at leo. Proin molestie ac nisi eu laoreet. Integer faucibus enim
+                                nec ullamcorper tempor. Aenean nec felis dui. Integer tristique odio mi, in volutpat
+                                metus posuere eu. Aenean suscipit ipsum nunc, id volutpat lorem hendrerit ac. Sed id
+                                elit quam. In ac mauris arcu. Praesent eget lectus sit amet diam vestibulum varius.
+                                Suspendisse dignissim mattis leo, nec facilisis erat tempor quis. Vestibulum eu
+                                vestibulum ex.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment flex gap-4 items-start mt-10 mb-10 border-b border-gray-300 pb-10">
+                    <div class="left-section" style="display: flex; align-items: center; justify-content: center;">
+                        <div class="img">
+                            <img src="./assets/img/avtar (2).jpg" alt="avatar" class="rounded-full" width="80px"
+                                height="80px">
+                        </div>
+                    </div>
+                    <div class="right-section" style="max-width: 1300px;">
+                        <div class="up flex gap-3 items-start mb-2">
+                            <div class="name lato-bold">
+                                <p style="font-size: 14px; color: #444;">Mark Jecno</p>
+                            </div>
+                            <div class="date lato-regular">
+                                <p style="font-size: 13px; color: #777;">( 12 Jannuary 2023 at 1:30AM )</p>
+                            </div>
+                        </div>
+                        <div class="comment-context lato-regular" style="font-size: 14px; color: #777; line-height: 1.8;">
+                            <p>Donec rhoncus massa quis nibh imperdiet dictum. Vestibulum id est sit amet felis
+                                fringilla bibendum at at leo. Proin molestie ac nisi eu laoreet. Integer faucibus enim
+                                nec ullamcorper tempor. Aenean nec felis dui. Integer tristique odio mi, in volutpat
+                                metus posuere eu. Aenean suscipit ipsum nunc, id volutpat lorem hendrerit ac. Sed id
+                                elit quam. In ac mauris arcu. Praesent eget lectus sit amet diam vestibulum varius.
+                                Suspendisse dignissim mattis leo, nec facilisis erat tempor quis. Vestibulum eu
+                                vestibulum ex.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment flex gap-4 items-start mt-10 border-b border-gray-300 pb-10">
+                    <div class="left-section" style="display: flex; align-items: center; justify-content: center;">
+                        <div class="img">
+                            <img src="./assets/img/avtar (3).jpg" alt="avatar" class="rounded-full" width="80px"
+                                height="80px">
+                        </div>
+                    </div>
+                    <div class="right-section" style="max-width: 1300px;">
+                        <div class="up flex gap-3 items-start mb-2">
+                            <div class="name lato-bold">
+                                <p style="font-size: 14px; color: #444;">Mark Jecno</p>
+                            </div>
+                            <div class="date lato-regular">
+                                <p style="font-size: 13px; color: #777;">( 12 Jannuary 2023 at 1:30AM )</p>
+                            </div>
+                        </div>
+                        <div class="comment-context lato-regular" style="font-size: 14px; color: #777; line-height: 1.8;">
+                            <p>Donec rhoncus massa quis nibh imperdiet dictum. Vestibulum id est sit amet felis
+                                fringilla bibendum at at leo. Proin molestie ac nisi eu laoreet. Integer faucibus enim
+                                nec ullamcorper tempor. Aenean nec felis dui. Integer tristique odio mi, in volutpat
+                                metus posuere eu. Aenean suscipit ipsum nunc, id volutpat lorem hendrerit ac. Sed id
+                                elit quam. In ac mauris arcu. Praesent eget lectus sit amet diam vestibulum varius.
+                                Suspendisse dignissim mattis leo, nec facilisis erat tempor quis. Vestibulum eu
+                                vestibulum ex.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="user-comments">
+        <div class="container" style="padding: 0 74px; margin-top: 45px;">
+            <form class="row" action="#" method="post">
+                <div class="title lato-bold" style="font-size: 36px; color: #222222;">
+                    <h2>LEAVE YOUR COMMENT</h2>
+                </div>
+                <div class="name mt-6 mb-4">
+                    <p class="lato-bold">Name</p>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 mt-3 h-[55px]" style="padding-left: 30px;">
+                </div>
+                <div class="email mt-6 mb-4">
+                    <p class="lato-bold">Email</p>
+                    <input type="email" name="email" id="email" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 mt-3 h-[55px]" style="padding-left: 30px;">
+                </div>
+                <div class="comment mt-6 mb-4">
+                    <p class="lato-bold">Comment</p>
+                    <textarea name="comment" id="comment" placeholder="Write Your Comment" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 mt-3" style="padding-left: 30px; height: 175px;"></textarea>
+                </div>
+                <div class="mt-6 mb-10">
+                    <button type="submit" class="lato-bold px-6 py-2" style="height: 50px; background-color: #ff4b3b; font-size: 14px; letter-spacing: 1.2px;">
+                        <span class="comment-post-label">POST COMMENT</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <footer class=" text-gray-700" style="height:490px; padding: 0 !important; background-color: #f9f9f9;">
+        <!-- Newsletter -->
+        <div class="container" style="padding: 35px 70px;">
+            <div class="row">
+
+
+                <div class="w-full border-b px-1 md:px-2" style="border-color: #dddddd;">
+                    <div class="flex flex-col md:flex-row items-center justify-between" style="margin-bottom: 35px;">
+
+                        <div>
+                            <h2 class="text-lg lato-bold" style="font-size: 18px; color: #222222;">KNOW IT ALL FIRST!
+                            </h2>
+                            <p class="text-sm text-gray-500 lato-regular" style="font-size: 14px; color: #777777;">
+                                Never Miss Anything From Multikart By Signing Up To Our Newsletter.
+                            </p>
+                        </div>
+
+                        <div class="flex w-full md:w-auto gap-3 ">
+                            <input type="email" placeholder="Enter your email"
+                                class="footer-email-input w-full md:w-80 px-4 py-2 outline-none"
+                                style="width: 342px; height: 52px;" />
+                            <button class="footer-subscribe-btn lato-bold px-6 py-2"
+                                style="width: 145px; height: 50px; background-color: #ff4b3b; font-size: 14px; color: #fff; letter-spacing: 1.2px;">
+                                <span class="footer-subscribe-label">SUBSCRIBE</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Main Footer -->
+                <div class="footer-main w-full md:px-2 py-12 mt-6">
+
+                    <div class="about footer-about">
+
+                        <!-- Logo + About -->
+                        <div class="logo-about">
+                            <h2 class="text-2xl font-bold flex items-center gap-2">
+                                <a href="#">
+                                    <img src="./assets/img/logo.png" alt="logo">
+                                </a>
+                            </h2>
+                            <a href="#" class="logo-about-link">
+                                <p class="mt-5 text-sm leading-6 mb-8 leto-regular hover:underline"
+                                    style="line-height: 2.5; font-size: 14px; color: #777777;">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam.
+                                </p>
+                            </a>
+
+                            <!-- Social icons -->
+                            <div class="flex gap-8 mt-8 text-lg">
+                                <i class="fab fa-facebook-f cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-google-plus-g cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-twitter cursor-pointer hover:text-red-500"></i>
+                                <i class="fab fa-instagram cursor-pointer hover:text-red-500"></i>
+                                <i class="fas fa-rss cursor-pointer hover:text-red-500"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sections"
+                        style="display: flex; gap: 100px; justify-content: center; gap: 120px; margin-left: 40px; ">
+
+                        <!-- My Account -->
+                        <div class="footer-my-account">
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">MY ACCOUNT</h3>
+                            <ul class="space-y-2 text-sm leto-regular mt-8" style="font-size: 14px; color: #777777;">
+                                <li><a href="#" class="hover:text-red-500 mt-8">Womens</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Clothing</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Accessories</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Featured</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Why We Choose -->
+                        <div>
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">WHY WE CHOOSE</h3>
+                            <ul class="space-y-2 text-sm leto-regular mt-8" style="font-size: 14px; color: #777777;">
+                                <li><a href="#" class="hover:text-red-500 mt-8">Shipping & Return</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Secure Shopping</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Gallary</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Affiliates</a></li>
+                                <li><a href="#" class="hover:text-red-500 mt-8">Contacts</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Store Info -->
+                        <div style="max-width: 270px;">
+                            <h3 class="lato-bold mb-8" style="font-size: 18px; color: #222222;">STORE INFORMATION</h3>
+                            <ul class="space-y-3 text-sm leto-regular mt-8 store-info"
+                                style="font-size: 14px; color: #777777; letter-spacing: 1.4px; line-height: 1.6;">
+                                <li class="flex items-start gap-4">
+                                    <a href="#">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Multikart Demo Store, Demo Store India
+                                        345-659
+                                    </a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="callto:123-456-7898">
+                                        <i class="fa-solid fa-phone"></i>
+                                        Call Us: 123-456-7898
+                                    </a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="mailto:support@Fiot.Com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        Email Us: Support@Fiot.Com</a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="faxto:123456">
+                                        <i class="fa-solid fa-fax"></i>
+                                        Fax: 123456</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <section id="copyrights">
+
+        <div class="py-4" style="margin:8px 55px;">
+            <div
+                class="w-full px-1 md:px-2 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+
+                <p>© 2023-24 themeforest powered by pixelstrap</p>
+
+                <div class="flex gap-3 mt-3 md:mt-0">
+                    <a href="#"> <img src="./assets/img/payment (1).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (2).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (3).png" class="h-6" /> </a>
+                    <a href="#"> <img src="./assets/img/payment (4).png" class="h-6" /> </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <button id="scroll-to-top" type="button" aria-label="Scroll to top">
+        <i class="fa-solid fa-angles-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="./assets/script/script.js"></script>
+</body>
+
+</html>
