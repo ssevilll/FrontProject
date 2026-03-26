@@ -212,6 +212,11 @@ body.dark #sidebar-menu i {
     left: -10px !important;
 }
 
+#services{
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 #controls-carousel,
 #controls-carousel * {
     z-index: 0 !important;
