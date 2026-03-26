@@ -2,12 +2,94 @@ document.addEventListener("DOMContentLoaded", function () {
     const desktopMedia = window.matchMedia("(min-width: 1280px)");
     const toggles = document.querySelectorAll("#navbar [data-dropdown-toggle], #navbar [data-dropend-toggle]");
     const navbarNav = document.querySelector("#navbar nav");
+    const mobileMainMenuToggle = document.querySelector('#navbar button[data-collapse-toggle="navbar-multi-level-dropdown"]');
+    const navActionGroup = document.querySelector("#navbar .right-side > .flex.items-center.gap-4");
+    const mainNavbarDropdown = document.getElementById("navbar-multi-level-dropdown");
+    const responsiveMainMenuMedia = window.matchMedia("(max-width: 1024px)");
     const stickyStartOffset = 300;
     const scrollTopTriggerOffset = 280;
     const scrollToTopButton = document.getElementById("scroll-to-top");
     const welcomeModal = document.getElementById("welcome-modal");
     const welcomeModalClose = document.getElementById("welcome-modal-close");
     const welcomeModalCta = document.getElementById("welcome-modal-cta");
+    let btn = document.getElementById("toggle-btn");
+
+    if (!btn) {
+        const themeToggle = document.createElement("div");
+        themeToggle.id = "theme-toggle";
+        themeToggle.innerHTML = '<button id="toggle-btn" style="font-size: 12px;">dark</button>';
+        document.body.appendChild(themeToggle);
+        btn = document.getElementById("toggle-btn");
+    }
+
+    if (btn) {
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark");
+            btn.textContent = "light";
+        }
+
+        btn.addEventListener("click", function () {
+            document.body.classList.toggle("dark");
+
+            if (document.body.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+                btn.textContent = "light";
+            } else {
+                localStorage.setItem("theme", "light");
+                btn.textContent = "dark";
+            }
+        });
+    }
+
+    if (mobileMainMenuToggle && navActionGroup && !navActionGroup.contains(mobileMainMenuToggle)) {
+        mobileMainMenuToggle.classList.add("main-menu-toggle");
+        navActionGroup.prepend(mobileMainMenuToggle);
+    }
+
+    if (mobileMainMenuToggle && mainNavbarDropdown) {
+        const setResponsiveMainMenuOpen = function (isOpen) {
+            mainNavbarDropdown.classList.toggle("is-open", isOpen);
+            mainNavbarDropdown.classList.toggle("hidden", !isOpen);
+            mobileMainMenuToggle.setAttribute("aria-expanded", String(isOpen));
+        };
+
+        setResponsiveMainMenuOpen(false);
+
+        mobileMainMenuToggle.addEventListener("click", function (event) {
+            if (!responsiveMainMenuMedia.matches) {
+                return;
+            }
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            const isOpening = !mainNavbarDropdown.classList.contains("is-open");
+            setResponsiveMainMenuOpen(isOpening);
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!responsiveMainMenuMedia.matches) {
+                return;
+            }
+
+            const clickedInsideMenu = event.target.closest("#navbar-multi-level-dropdown");
+            const clickedToggle = event.target.closest('[data-collapse-toggle="navbar-multi-level-dropdown"]');
+
+            if (!clickedInsideMenu && !clickedToggle && mainNavbarDropdown.classList.contains("is-open")) {
+                setResponsiveMainMenuOpen(false);
+            }
+        });
+
+        responsiveMainMenuMedia.addEventListener("change", function () {
+            if (!responsiveMainMenuMedia.matches) {
+                mainNavbarDropdown.classList.remove("is-open");
+                mainNavbarDropdown.classList.remove("hidden");
+                mobileMainMenuToggle.setAttribute("aria-expanded", "false");
+            } else {
+                setResponsiveMainMenuOpen(false);
+            }
+        });
+    }
 
     if (welcomeModal) {
         const closeWelcomeModal = function () {
@@ -120,17 +202,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
             clearTimeout(closeTimer);
-            
+
             // Set positioning for ALL dropdowns (not just custom dropends)
             if (menu.classList.contains("nav-dropdown-layer")) {
                 // Ensure parent has position: relative
                 if (parentItem) {
                     parentItem.style.position = "relative";
                 }
-                
+
                 // Set positioning before revealing
                 menu.style.position = "absolute";
-                
+
                 // For nested dropdowns (dropends), position to the right
                 if (isCustomDropend) {
                     menu.style.left = "100%";
@@ -144,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 menu.style.transform = "none";
             }
-            
+
             menu.classList.remove("hidden");
             toggle.setAttribute("aria-expanded", "true");
         };

@@ -66,26 +66,24 @@
                             aria-controls="sidebar-menu" class="text-gray-800">
                             <i class="fa-solid fa-bars text-xl"></i>
                         </button>
-                        <a href="#" class="m-0 p-0">
+                        <a href="./home.html" class="m-0 p-0">
                             <img src="./assets/img/logo.png" alt="Site logo" class="h-10 w-auto">
                         </a>
                     </div>
 
-                    <button data-collapse-toggle="navbar-multi-level-dropdown" type="button"
-                        class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm text-gray-500 hover:bg-gray-100 md:hidden"
-                        aria-controls="navbar-multi-level-dropdown" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
-                                d="M5 7h14M5 12h14M5 17h14" />
-                        </svg>
-                    </button>
-
                     <div class="right-side flex w-full items-center justify-between md:w-auto gap-5"
                         style="color: #212121; font-size: 18px">
 
-
+                        <button data-collapse-toggle="navbar-multi-level-dropdown" type="button"
+                            class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm text-gray-500 hover:bg-gray-100 md:hidden"
+                            aria-controls="navbar-multi-level-dropdown" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                    d="M5 7h14M5 12h14M5 17h14" />
+                            </svg>
+                        </button>
                         <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level-dropdown">
                             <ul
                                 class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:ms-12 md:flex-row md:space-x-8 md:border-0 md:bg-white">
@@ -340,11 +338,14 @@
                                     <div id="blogsDropdown"
                                         class="nav-dropdown-layer nav-dropdown-main hidden w-44 divide-y divide-gray-100 bg-white">
                                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="blogsDropdownButton">
-                                            <li><a href="./blog-left.html" class="block px-4 py-2 hover:bg-gray-100">Blogs left sidebar</a>
+                                            <li><a href="./blog-left.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blogs left sidebar</a>
                                             </li>
-                                            <li><a href="./blog-right.html" class="block px-4 py-2 hover:bg-gray-100">Blogs right sidebar</a>
+                                            <li><a href="./blog-right.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blogs right sidebar</a>
                                             </li>
-                                            <li><a href="./blog-noside.html" class="block px-4 py-2 hover:bg-gray-100">Blogs no sidebar</a>
+                                            <li><a href="./blog-noside.html"
+                                                    class="block px-4 py-2 hover:bg-gray-100">Blogs no sidebar</a>
                                             </li>
                                             <li><a href="./blog-single.html"
                                                     class="block px-4 py-2 hover:bg-gray-100">Blog Single</a>
@@ -957,6 +958,10 @@
     <button id="scroll-to-top" type="button" aria-label="Scroll to top">
         <i class="fa-solid fa-angles-up" aria-hidden="true"></i>
     </button>
+
+    <div id="theme-toggle">
+        <button id="toggle-btn" style="font-size: 12px;">dark</button>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
     <script src="./assets/script/script.js"></script>

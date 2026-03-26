@@ -1,4 +1,153 @@
-﻿#navbar button:hover {
+﻿#theme-toggle {
+    position: fixed;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    z-index: 160001;
+}
+
+#toggle-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* DARK MODE STYLES */
+body.dark {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+body.dark #header,
+body.dark #top-header,
+body.dark #navbar nav,
+body.dark #current-page,
+body.dark footer,
+body.dark #copyrights,
+body.dark #percentage-off,
+body.dark #collection,
+body.dark #exclusive,
+body.dark #default-sidebar,
+body.dark #comment-box,
+body.dark #about-card,
+body.dark #theme-toggle button {
+    background-color: #1a1a1a !important;
+    color: #f3f4f6 !important;
+}
+
+body.dark #header h1,
+body.dark #header h2,
+body.dark #header h3,
+body.dark #header h4,
+body.dark #header h5,
+body.dark #header h6,
+body.dark #header p,
+body.dark #header a,
+body.dark #header span,
+body.dark #current-page h1,
+body.dark #current-page h2,
+body.dark #current-page h3,
+body.dark #current-page h4,
+body.dark #current-page h5,
+body.dark #current-page h6,
+body.dark #current-page p,
+body.dark #current-page a,
+body.dark #current-page span,
+body.dark footer h1,
+body.dark footer h2,
+body.dark footer h3,
+body.dark footer h4,
+body.dark footer h5,
+body.dark footer h6,
+body.dark footer p,
+body.dark footer a,
+body.dark footer span,
+body.dark #copyrights p,
+body.dark #copyrights a,
+body.dark #copyrights span,
+body.dark #theme-toggle button {
+    color: #f3f4f6 !important;
+}
+
+body.dark #header .border-b,
+body.dark footer .border-b,
+body.dark #copyrights {
+    border-color: #374151 !important;
+}
+
+body.dark #navbar #navbar-multi-level-dropdown,
+body.dark #navbar #navbar-multi-level-dropdown > ul,
+body.dark #navbar .nav-dropdown-main,
+body.dark #navbar [id^="homeDropend"],
+body.dark #navbar .nav-dropdown-main > ul,
+body.dark #navbar [id^="homeDropend"] > ul {
+    background-color: #1a1a1a !important;
+    border-color: #374151 !important;
+}
+
+body.dark #navbar #navbar-multi-level-dropdown > ul > li > button,
+body.dark #navbar #navbar-multi-level-dropdown > ul > li > a,
+body.dark #navbar .nav-dropdown-main a,
+body.dark #navbar .nav-dropdown-main button,
+body.dark #navbar [id^="homeDropend"] a,
+body.dark #navbar [id^="homeDropend"] button,
+body.dark #navbar #navbar-multi-level-dropdown .text-gray-900,
+body.dark #navbar #navbar-multi-level-dropdown .text-gray-700 {
+    color: #f3f4f6 !important;
+}
+
+body.dark #navbar #navbar-multi-level-dropdown svg,
+body.dark #navbar .nav-dropdown-main svg,
+body.dark #navbar [id^="homeDropend"] svg {
+    color: #f3f4f6 !important;
+}
+
+body.dark #sidebar-menu,
+body.dark #sidebar-menu > ul,
+body.dark #sidebar-menu li > ul,
+body.dark #sidebar-menu .sidebar-mega-menu {
+    background-color: #1a1a1a !important;
+    border-color: #374151 !important;
+}
+
+body.dark #default-sidebar,
+body.dark #default-sidebar > div,
+body.dark #default-sidebar .bg-white {
+    background-color: #1a1a1a !important;
+    border-color: #374151 !important;
+}
+
+body.dark #default-sidebar h1,
+body.dark #default-sidebar h2,
+body.dark #default-sidebar h3,
+body.dark #default-sidebar h4,
+body.dark #default-sidebar h5,
+body.dark #default-sidebar h6,
+body.dark #default-sidebar p,
+body.dark #default-sidebar a,
+body.dark #default-sidebar span,
+body.dark #default-sidebar i {
+    color: #f3f4f6 !important;
+}
+
+body.dark #sidebar-menu a,
+body.dark #sidebar-menu p,
+body.dark #sidebar-menu h1,
+body.dark #sidebar-menu h2,
+body.dark #sidebar-menu h3,
+body.dark #sidebar-menu h4,
+body.dark #sidebar-menu h5,
+body.dark #sidebar-menu h6,
+body.dark #sidebar-menu span,
+body.dark #sidebar-menu i {
+    color: #f3f4f6 !important;
+}
+
+
+#navbar button:hover {
     cursor: pointer;
 }
 
@@ -1781,6 +1930,10 @@ footer .store-info a:hover {
 }
 
 @media (max-width: 640px) {
+    .blog-noside #header #navbar {
+        display: flex !important;
+    }
+
     .blog-noside #header #top-header .left-section {
         display: none !important;
     }
@@ -1850,7 +2003,7 @@ footer .store-info a:hover {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1024px) {
+@media (min-width: 991px) and (max-width: 1024px) {
     .blog-noside #header #top-header .left-section {
         display: none !important;
     }
@@ -1873,7 +2026,7 @@ footer .store-info a:hover {
     }
 }
 
-@media (min-width:1025px) and (max-width:1280px) {
+@media (min-width:1024px) and (max-width:1280px) {
     .blog-noside #header #top-header .left-section {
         display: none !important;
     }
@@ -1893,5 +2046,56 @@ footer .store-info a:hover {
         width: 545px !important;
         height: 325px !important;
         margin-bottom: 10px !important;
+    }
+}
+
+/* Main dropdown toggle visibility and inline alignment across responsive ranges */
+#navbar .main-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    #navbar .main-menu-toggle {
+        display: inline-flex !important;
+        order: -1;
+    }
+
+    #navbar .right-side {
+        width: auto !important;
+        margin-left: auto;
+        justify-content: flex-end !important;
+    }
+
+    #navbar .right-side>.flex.items-center.gap-4 {
+        width: auto !important;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    #navbar-multi-level-dropdown {
+        display: none !important;
+    }
+
+    #navbar #navbar-multi-level-dropdown.is-open {
+        display: block !important;
+    }
+
+    #navbar #navbar-multi-level-dropdown.is-open>ul {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100%;
+        margin-top: 12px;
+        margin-left: 0 !important;
+        gap: 0 !important;
+    }
+
+    #navbar #navbar-multi-level-dropdown.is-open>ul>li {
+        width: 100%;
+    }
+
+    #navbar #navbar-multi-level-dropdown.is-open>ul>li>button {
+        width: 100%;
+        justify-content: space-between;
     }
 }
